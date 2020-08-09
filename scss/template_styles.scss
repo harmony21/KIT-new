@@ -542,6 +542,7 @@ img {
                 flex-direction: column;
                 padding-top: 20px;
                 input {
+                    -webkit-appearance: none;
                     width: 100%;
                     margin-bottom: 10px;
                     box-sizing: border-box;
