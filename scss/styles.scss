@@ -1,0 +1,532 @@
+//resolutions
+$laptop: 1366px;
+$min-laptop: 1200px;
+$tablets: 1024px;
+$min-tablets: 768px;
+$phones: 480px;
+//config
+@mixin laptop {
+    @media screen and (max-width: $laptop) {
+        @content;
+    }
+}
+@mixin min-laptop {
+    @media screen and (max-width: $min-laptop) {
+        @content;
+    }
+}
+@mixin tablets {
+    @media screen and (max-width: $tablets) {
+        @content;
+    }
+}
+@mixin min-tablets {
+    @media screen and (max-width: $min-tablets) {
+        @content;
+    }
+}
+@mixin phones {
+    @media screen and (max-width: $phones) {
+        @content;
+    }
+}
+body {
+    font-size: 16px;
+    @include phones {
+        font-size: 13px;
+    }
+}
+
+.header {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.address {
+    p {
+        font-size: 14px;
+        color: #fff;
+        @include laptop {
+            font-size: 12px;
+        }
+    }
+}
+.phones {
+    a {
+        font-size: 20px;
+        color: #fff;
+        @include laptop {
+            font-size: 14px;
+        }
+    }
+}
+.btn {
+    background-color: #1253C0;
+    color: #fff;
+    font-size: 12px;
+    &:hover {
+        background-color: darken(#1253C0, 5);
+    }
+    &--green {
+        background-color: #44AE33;
+        &:hover {
+            background-color: darken(#44AE33, 5);
+        }
+    }
+}
+.menu {
+    &__item {
+        a {
+            color: #fff;
+            font-size: 14px;
+            @include laptop {
+                font-size: 12px;
+            }
+        }
+    }
+}
+.inside-menu {
+    background-color: rgba(0, 0, 0, 0.8);
+    &__item {
+        li {
+            a {
+                color: #fff;
+            }
+        }
+    }
+    &__link {
+        color: #fff;
+        font-size: 16px;
+        @include laptop {
+            font-size: 14px;
+        }
+    }
+}
+.search {
+    input {
+        color: #fff;
+        font-size: 12px;
+        font-family: Circe-Regular;
+    }
+}
+:-moz-placeholder {
+    color: #fff;
+}
+:-ms-input-placeholder {
+    color: #fff;
+}
+::-moz-placeholder {
+    color: #fff;
+}
+::-webkit-input-placeholder {
+    color: #fff;
+}
+:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+:focus::-moz-placeholder {
+    color: transparent;
+}
+:focus:-moz-placeholder {
+    color: transparent;
+}
+:focus:-ms-input-placeholder {
+    color: transparent;
+}
+.intro {
+    &__desc {
+        color: #fff;
+        h2 {
+            font-size: 95px;
+            @include laptop {
+                font-size: 52px;
+            }
+            @include min-tablets {
+                font-size: 40px;
+            }
+        }
+        p {
+            font-size: 24px;
+            background-color: #1253C0;
+            @include laptop {
+                font-size: 18px;
+            }
+            @include min-tablets {
+                font-size: 16px;
+            }
+        }
+        span {
+            font-size: 24px;
+            color: #fff;
+            @include laptop {
+                font-size: 14px;
+            }
+        }
+    }
+}
+.properties {
+    ul {
+        span {
+            color: #fff;
+            @include laptop {
+                font-size: 14px;
+            }
+            @include phones {
+                color: #000;
+                font-weight: bold;
+                font-size: 14px;
+            }
+        }
+    }
+}
+.form {
+    &.calculator {
+        .form__content {
+            @include min-tablets {
+                background-color: #1253C0;
+            }
+        }
+        .form__fields {
+            @include min-tablets {
+                background-color: #fff;
+            }
+        }
+        .form__bottom {
+            p {
+                @include min-tablets {
+                    color: rgba(0, 0, 0, 0.5);
+                }
+                a {
+                    @include min-tablets {
+                        color: rgba(0, 0, 0, 0.5);
+                    }
+                }
+            }
+        }
+        .form__title {
+            h3 {
+                @include min-tablets {
+                    color: #fff;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    &__title {
+        h3 {
+            font-size: 30px;
+            @include laptop {
+                font-size: 24px;
+            }
+        }
+    }
+    &__fields {
+        input {
+            color: #000;
+            font-size: 14px;
+        }
+        :-moz-placeholder {
+            color: #000;
+        }
+        :-ms-input-placeholder {
+            color: #000;
+        }
+        ::-moz-placeholder {
+            color: #000;
+        }
+        ::-webkit-input-placeholder {
+            color: #000;
+        }
+        :focus::-webkit-input-placeholder {
+            color: transparent;
+        }
+        :focus::-moz-placeholder {
+            color: transparent;
+        }
+        :focus:-moz-placeholder {
+            color: transparent;
+        }
+        :focus:-ms-input-placeholder {
+            color: transparent;
+        }
+    }
+    &__bottom {
+        p {
+            font-size: 13px;
+            color: #fff;
+            a {
+                color: #fff;
+            }
+        }
+    }
+    .form-group .btn-tertiary {
+        color: rgba(0, 0, 0, 0.5);
+        span {
+            @include laptop {
+                font-size: 12px;
+            }
+        }
+    }
+    .form-group .btn-tertiary:hover,.form-group .btn-tertiary:focus {
+        color:#888;
+        border-color:#888;
+    }
+}
+.section {
+    .desc-wrap {
+        font-size: 14px;
+        @include phones {
+            font-size: 12px;
+        }
+    }
+}
+.btn-more {
+    @include phones {
+        span {
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 12px;
+        }
+    }
+}
+.section-title {
+    font-size: 36px;
+    @include laptop {
+        font-size: 28px;
+    }
+    @include phones {
+        font-size: 18px;
+    }
+    ~p {
+        font-size: 14px;
+        @include phones {
+            font-size: 12px;
+        }
+        a {
+            color: #000;
+        }
+    }
+}
+.activities {
+    &__item {
+        &:hover {
+            .activities__desc {
+                background: rgba(231, 239, 252, 0.9);
+            }
+            h4 {
+                color: #1253C0;
+            }
+            a {
+                color: #000;
+                &:hover {
+                    color: #1253C0;
+                }
+            }
+        }
+    }
+    &__desc {
+        h4 {
+            color: #fff;
+            font-size: 24px;
+            @include laptop {
+                font-size: 18px;
+            }
+        }
+        ul {
+            li {
+                a {
+                    font-size: 18px;
+                    color: #fff;
+                    @include laptop {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+    &__details {
+        a {
+            font-size: 14px;
+            color: #fff;
+            @include laptop {
+                font-size: 11px;
+            }
+        }
+    }
+}
+.advantages {
+    &__item {
+        span {
+            font-size: 18px;
+            @include laptop {
+                font-size: 14px;
+            }
+        }
+    }
+}
+.calculate-condition {
+    &__left {
+        p {
+            color: #fff;
+            font-size: 24px;
+            @include laptop {
+                font-size: 18px;
+            }
+        }
+    }
+    h2 {
+        font-size: 66px;
+        color: #fff;
+        @include laptop {
+            font-size: 40px;
+        }
+    }
+}
+.instagram {
+    span {
+        font-size: 30px;
+        @include phones {
+            font-size: 20px;
+        }
+    }
+}
+.gallery {
+    &__item {
+        &.all-objects {
+            h4 {
+                color: #fff;
+                font-size: 24px;
+                @include laptop {
+                    font-size: 18px;
+                }
+                @include phones {
+                    font-size: 14px;
+                }
+            }
+            a {
+                color: #fff;
+                span {
+                    font-size: 14px;
+                    @include laptop {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+    &__left {
+        a {
+            color: #fff;
+            span {
+                font-size: 14px;
+            }
+        }
+    }
+    &__hidden-info {
+        h4 {
+            font-size: 24px;
+            @include laptop {
+                font-size: 18px;
+            }
+        }
+    }
+    &__hidden-desc {
+        .gallery__left {
+            a {
+                color: #000;
+            }
+            span {
+                color: #000;
+            }
+        }
+    }
+    &__hidden-details {
+        span {
+            font-size: 14px;
+        }
+    }
+}
+.footer {
+    &__top {
+        .address {
+            p {
+                &:first-child {
+                    font-size: 14px;
+                    @include min-laptop {
+                        font-size: 10px;   
+                    }
+                }
+                &:last-child {
+                    color: rgba(255,255,255,0.5);
+                    font-size: 12px;
+                    @include min-laptop {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+    &__middle {
+        .menu {
+            a {
+                color: #fff;
+                font-size: 14px;
+                @include min-laptop {
+                    font-size: 12px;
+                }
+                @include phones {
+                    color: rgba(255, 255, 255, 0.5);
+                }
+            }
+        }
+        a {
+            color: #fff;
+            &.mail {
+                font-size: 14px;
+                @include min-laptop {
+                    font-size: 12px;
+                }
+                @include phones {
+                    font-size: 14px;
+                }
+            }
+            &.phone {
+                font-size: 24px;
+                @include laptop {
+                    font-size: 18px;
+                }
+                @include min-laptop {
+                    font-size: 14px;
+                }
+                @include phones {
+                    font-size: 24px;
+                }
+            }
+        }
+    } 
+    &__bottom {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 12px;
+        @include min-laptop {
+            font-size: 10px;
+        }
+        a {
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+}
+.mobile-menu {
+    a {
+        color: #fff;
+    }
+}
+.order-call {
+    .form {
+        &__bottom {
+            p {
+                text-align: center;
+                color: rgba(0, 0, 0, 0.5);
+                a {
+                    color: rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+    }
+}
