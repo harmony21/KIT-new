@@ -556,11 +556,13 @@ img {
         padding-top: 20px; }
         .form.calculator .form__fields input {
           -webkit-appearance: none;
+          padding: 0;
+          margin: 0;
+          border-radius: 0;
           width: 100%;
           margin-bottom: 10px;
           -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-          border-radius: none; } }
+          box-sizing: border-box; } }
     @media screen and (max-width: 768px) and (max-width: 480px) {
       .form.calculator .form__fields input {
         margin-bottom: 0;
@@ -613,7 +615,9 @@ img {
     margin-top: 40px; }
     .form__fields input {
       -webkit-appearance: none;
-      border-radius: none;
+      padding: 0;
+      margin: 0;
+      border-radius: 0;
       -webkit-box-shadow: none;
       box-shadow: none;
       border: none;
