@@ -565,7 +565,7 @@ img {
           box-sizing: border-box; } }
     @media screen and (max-width: 768px) and (max-width: 480px) {
       .form.calculator .form__fields input {
-        margin-bottom: 0;
+        margin-bottom: 10px;
         margin-top: 5px;
         padding-bottom: 3px; } }
     @media screen and (max-width: 768px) {
