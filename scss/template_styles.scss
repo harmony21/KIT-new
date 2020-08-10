@@ -444,7 +444,7 @@ img {
     }
     @include phones {
         display: block;
-        bottom: 365px;
+        bottom: 360px;
     }
     ul {
         display: flex;
@@ -571,7 +571,7 @@ img {
         }
         .form__title {
             @include phones {
-                padding: 20px 0;
+                padding: 10px 0;
                 &:before {
                     content: url('images/house-white-icon.svg');
                     margin-left: 20px;
@@ -673,7 +673,7 @@ img {
             right: 0;
         }
         @include min-tablets {
-            color: #fff;
+            color: rgba(255, 255, 255, 0.6);
             top: 15px;
             font-size: 12px;
         }

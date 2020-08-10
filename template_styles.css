@@ -454,7 +454,7 @@ img {
   @media screen and (max-width: 480px) {
     .properties {
       display: block;
-      bottom: 365px; } }
+      bottom: 360px; } }
   .properties ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -580,7 +580,7 @@ img {
         text-align: center; } }
     @media screen and (max-width: 480px) {
       .form.calculator .form__title {
-        padding: 20px 0; }
+        padding: 10px 0; }
         .form.calculator .form__title:before {
           content: url("images/house-white-icon.svg");
           margin-left: 20px; } }
@@ -682,7 +682,7 @@ img {
       right: 0; }
     @media screen and (max-width: 768px) {
       .range-slider span {
-        color: #fff;
+        color: rgba(255, 255, 255, 0.6);
         top: 15px;
         font-size: 12px; } }
   .range-slider #polzunok {
