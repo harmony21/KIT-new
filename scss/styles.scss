@@ -39,6 +39,51 @@ body {
 
 .header {
     background-color: rgba(0, 0, 0, 0.5);
+    &--inside {
+        background-color: transparent;
+        @include min-tablets {
+            background: #3A3D4B;
+        }
+        .address {
+            p {
+                color: #000;
+            }
+        }
+        .phones {
+            a {
+                color: #000;
+            }
+        }
+        .menu {
+            &__item {
+                a {
+                    color: #000;
+                }
+            }
+        }
+        .inside-menu {
+            a {
+                color: #fff;
+            }
+        }
+        .search {
+            input {
+                color: #000;
+            }
+            :-moz-placeholder {
+                color: #000;
+            }
+            :-ms-input-placeholder {
+                color: #000;
+            }
+            ::-moz-placeholder {
+                color: #000;
+            }
+            ::-webkit-input-placeholder {
+                color: #000;
+            }
+        }
+    }
 }
 .address {
     p {
@@ -69,6 +114,14 @@ body {
         background-color: #44AE33;
         &:hover {
             background-color: darken(#44AE33, 5);
+        }
+    }
+    &--inverse {
+        background: #E7EFFC;
+        color: #000;
+        &:hover {
+            background: #1253C0;
+            color: #fff;
         }
     }
 }
@@ -274,7 +327,7 @@ body {
     .desc-wrap {
         font-size: 14px;
         @include phones {
-            font-size: 12px;
+            font-size: 15px;
         }
     }
 }
@@ -292,15 +345,15 @@ body {
         font-size: 28px;
     }
     @include phones {
-        font-size: 18px;
+        font-size: 22px;
     }
     ~p {
         font-size: 14px;
-        @include phones {
-            font-size: 12px;
-        }
         a {
             color: #000;
+            @include phones {
+                font-weight: bold;
+            }
         }
     }
 }
@@ -336,6 +389,9 @@ body {
                     color: #fff;
                     @include laptop {
                         font-size: 13px;
+                    }
+                    @include phones {
+                        font-size: 15px;
                     }
                 }
             }
@@ -473,6 +529,7 @@ body {
                 }
                 @include phones {
                     color: rgba(255, 255, 255, 0.5);
+                    font-size: 14px;
                 }
             }
         }
@@ -516,6 +573,15 @@ body {
     a {
         color: #fff;
     }
+    .address {
+        p {
+            @include phones {
+                color: rgba(255, 255, 255, 0.6);
+                font-size: 14px;
+            }
+            
+        }
+    }
 }
 .order-call {
     .form {
@@ -525,6 +591,409 @@ body {
                 color: rgba(0, 0, 0, 0.5);
                 a {
                     color: rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+    }
+}
+
+//Хлебные крошки
+.cookies {
+    a {
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 11px;
+    }
+    &--light {
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        a {
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+}
+
+//Отзывы
+.reviews-links {
+    ul {
+        li {
+            background-color: #E7EFFC;
+            &:hover {
+                background-color: darken(#E7EFFC, 5);
+            }
+            a {
+                color: #000;
+                font-size: 14px;
+                @include phones {
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+}
+.reviews {
+    &__link {
+        color: #fff;
+        span {
+            font-size: 12px;
+        }
+    }
+    &__desc {
+        div {
+            &:last-child {
+                p {
+                    &:first-child {
+                        font-size: 14px;
+                    }
+                    &:last-child {
+                        font-size: 12px;
+                        color: rgba(0, 0, 0, 0.5);
+                    }
+                }
+            }
+        }
+    }
+}
+.links {
+    @include min-tablets {
+        a {
+            span {
+                font-size: 11px;
+                @include phones {
+                    font-size: 12px;
+                }
+            }
+            &:first-child {
+                color: #000;
+                background: #E7EFFC;
+            }
+            &:last-child {
+                background: #1253C0;
+                color: #fff;
+            }
+        }
+    }
+}
+//Цены
+.prices {
+    th {
+        background: #1253C0;
+        color: #fff;
+        font-size: 14px; 
+        @include phones {
+            font-size: 12px;
+        }
+    }
+    td {
+        font-size: 14px;
+        border-top: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        background: #E7EFFC;
+        @include phones {
+            font-size: 12px;
+        }
+    }
+    div {
+        background: #E7EFFC;
+        li {
+            font-size: 14px;
+            @include phones {
+                font-size: 13px;
+            }
+        }
+    }
+    &--special {
+        td {
+            background: #1253C0;
+            color: #fff; 
+            border: 5px solid #fff;
+        }
+        &--metal {
+            th {
+                border-left: 5px solid #fff;
+                border-right: 5px solid #fff;
+            }
+            td {
+                background: #E7EFFC;
+                color: #000;
+            }
+        }
+    }
+}
+.gallery-wrap {
+    .gallery {
+        h4 {
+            font-size: 16px;
+        }
+    }
+}
+.contacts-wrap {
+    background: rgba(255, 255, 255, 0.8);
+    &__top {
+        a {
+            color: #1253C0;
+            font-size: 24px;
+        }
+    }
+    ul {
+        li {
+            p {
+                font-size: 14px;
+            }
+            a {
+                color: #1253C0;
+            } 
+        }
+    }
+    p {
+        font-size: 14px;
+    }
+}
+//Наши услуги
+.section-title {
+    &--service {
+        color: #1253C0;
+    }
+}
+.desc-title {
+    &--prev {
+        font-size: 18px;
+    }
+}
+.content-desc {
+    p {
+        font-size: 14px;
+    }
+}
+.services-list {
+    li {
+        a {
+            color: #000;
+            font-size: 14px;  
+            &:hover {
+                color: #1253C0;
+            }
+        }
+    }
+}
+.activities {
+    &--services {
+        .activities__details {
+            a {
+                font-size: 16px;
+                @include phones {
+                    color: #000;
+                    &.active {
+                        color: #1253C0;
+                    }
+                }
+            }
+        }
+        .activities__wrap {
+            .btn {
+                color: #fff;
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+        .activities__link {
+            span {
+                color: rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}
+//Новости
+.news {
+    &__item {
+        h3 {
+            font-size: 24px;
+            color: #fff;
+            @include laptop {
+                font-size: 18px;
+            }
+            @include phones {
+                font-size: 16px;
+            }
+        }
+    }
+    &__desc {
+        div {
+            span {
+                font-size: 14px;
+                color: #fff;
+            }
+        }
+        p {
+            font-size: 14px;
+            color: #fff;
+        }
+    }
+}
+.pages {
+    ul {
+        a {
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.5);
+            &:hover {
+                background: #E7EFFC;
+            }
+        }
+    }
+}
+.news-more {
+    @include min-tablets {
+        color: #000;
+    }
+}
+//Новость подробно
+.similar-news {
+    background: rgba(231, 239, 252, 0.5);
+}
+.news-more {
+    &__title {
+        h2 {
+            font-size: 64px;
+            color: #fff;
+            @include laptop {
+                font-size: 44px;
+            }
+            @include phones {
+                color: #000;
+                text-transform: uppercase;
+                font-size: 26px;
+            }
+        }
+    }
+    &__desc {
+        p {
+            font-size: 14px;
+        }
+    }
+}
+//Галерея подробно
+.gallery-more {
+    &__right {
+        background: rgba(231, 239, 252, 0.5);
+        h4 {
+            font-size: 24px;
+        }
+        ul {
+            li {
+                font-size: 14px;
+                span {
+                    color: #1253C0;
+                }
+            }
+        }
+    }
+}
+//Услуги родробно (кирпичные дома)
+.news-more {
+    &__intro {
+        &--services {
+            .news-more__title {
+                h2, span {
+                    @include phones {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+.variation {
+    &__center {
+        table {
+            td {
+                background: rgba(231, 239, 252, 0.9);
+                font-size: 16px;
+                border: 2px solid #fff;
+                &.none {
+                    background: #BCBCBC;
+                }
+                @include laptop {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    &__price {
+        &-left, &-right {
+            div {
+                p {
+                    background: #1253C0;
+                    font-size: 14px;
+                    color: #fff;
+                    @include phones {
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
+    }
+}
+.factos {
+    background: #E7EFFC;
+    p {
+        font-size: 18px;
+    }
+    &__item {
+        font-size: 12px;
+    }
+}
+//Проектирование
+.types {
+    &__title {
+        h3 {
+            color: #1253C0;
+            font-size: 30px;
+            @include phones {
+                font-size: 18px;
+            }
+        }
+        div {
+            &:last-child {
+                color: #E73A3E;
+                p {
+                    font-size: 30px;
+                    @include phones {
+                        font-size: 18px;
+                    }
+                }
+                span {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    &__left {
+        ul {
+            li {
+                @include tablets {
+                    font-size: 11px;
+                } 
+                @include phones {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    &__right {
+        .form {
+            background: rgba(231, 239, 252, 0.7);
+        }
+        .form__bottom {
+            p {
+                color: #000;
+                @include phones {
+                    color: rgba(0,0,0,0.5);
+                }
+                a {
+                    color: #000;
+                    @include phones {
+                        color: rgba(0,0,0,0.5);
+                    }
                 }
             }
         }

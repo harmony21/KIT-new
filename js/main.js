@@ -7,10 +7,11 @@ $(document).ready(function() {
         max: 300,
         step: 5,
         values: [ 90, 130 ],
-        slide : function(event, ui) {    
+        slide : function(event, ui) {  
             $("#result-min").text(ui.values[0] + " кв.м.");      
-            $("#result-max").text(ui.values[1] + " кв.м.");      
-        }
+            $("#result-max").text(ui.values[1] + " кв.м.");  
+        },
+        
     });
     $("#result-min").text($("#polzunok").slider("values", 0) + " кв.м.");  
     $("#result-max").text($("#polzunok").slider("values", 1) + " кв.м.");  
@@ -33,6 +34,13 @@ $(document).ready(function() {
 
 
     if ($(window).width() <= 480) {
+       $('.header--changable').addClass('header--inside');
+    }
+    if ($(window).width() > 480) {
+        $('.header--changable').removeClass('header--inside');
+     }
+
+    if ($(window).width() <= 480) {
         $('.intro__desc').find('span').html('Более 10 лет мы профессионально занимаемся строительством и накопили богатый опыт в малоэтажном строительстве');
     }
 
@@ -42,101 +50,102 @@ $(document).ready(function() {
         autoFocus: false,
         closeExisting: true,
     });
-    $(".sticky-icons__link--calculate").fancybox();
 
 
-    //прокрутка "подробнее"
-    // $(function(){
-    //     $(".link-more").click(function(){
-    //             var _href = $(this).attr("href");
-    //             $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
-    //             return false;
-    //     });
-    // });
+    $('.sticky-icons__link--calculate').fancybox({
+      closeExisting: true,
+      touch: false,
+      afterShow: function() {
+        $('#calculateSlider').sliderPro({
+          autoplay: false,
+          loop: false,
+          touchSwipe: false,
+          buttons: false,
+          height: 500,
+        });
+
+        var calculateSlider = $('#calculateSlider').data('sliderPro');
+        $('.form__link--back').on('click', function (e) {
+            calculateSlider.previousSlide();
+        })
+        $('.form__link--forward').on('click', function (e) {
+            calculateSlider.nextSlide();
+        }) 
+
+      },
+    }); 
 
 
-    //расчет высоты блоков в отзывах
-    // var mh = 0;
-    // $(".reviews__item.text").each(function () {
-    //     var h_block = parseInt($(this).outerHeight());
-    //     if(h_block > mh) {
-    //        mh = h_block;
-    //     };
-    // });
-    // $(".reviews__item").css('height', mh);
-
-    //появление блока "Выбор города"
-    // $(".address__choice-link").click(function(e){
-    //   $(".address__hidden").fadeIn();
-    // });
-    // $(".address__close").click(function(e){
-    //   $(".address__hidden").fadeOut();
-    // });
-
-    //Заказать звонок
-    // $('.btn-call-back').fancybox({
-    //     autoFocus: false,
-    //     closeExisting: true,
-    // }); 
-
-    //Оставить отзыв
-  //   $('.btn-leave-review').fancybox({
-  //     autoFocus: false,
-  //     closeExisting: true,
-  // });
-
-  // $("a.gallery").fancybox();
+    $('.links--calculate').fancybox({
+        closeExisting: true,
+        touch: false,
+        afterShow: function() {
+          $('#calculateSlider').sliderPro({
+            autoplay: false,
+            loop: false,
+            touchSwipe: false,
+            buttons: false,
+            height: 500,
+            autoHeight: true,
+          });
+  
+          var calculateSlider = $('#calculateSlider').data('sliderPro');
+          $('.form__link--back').on('click', function (e) {
+              calculateSlider.previousSlide();
+          })
+          $('.form__link--forward').on('click', function (e) {
+              calculateSlider.nextSlide();
+          }) 
+  
+        },
+      }); 
 
 
-    //заказать звонок
-    // $('.btn-order-call').fancybox({
-    //   autoFocus: false
-    // }); 
-
-
-
-    //Мобильное меню
-    // $('.menu-icon').fancybox({
-    //   closeExisting: true,
-    // }); 
-    //перемещение номера телефона в header
-    // if ($(window).width() <= 1025) {
-    //     $('.header__bottom').append( $('.header').find('.phone') );
-    // }
-
-    //слайдер фото автомобиля в модальном окне
-    // $('.btn-order-car').fancybox({
-    //   closeExisting: true,
-    //   touch: false,
-    //   afterShow: function() {
-    //     $('#sliderCar').sliderPro({
-    //       autoplay: false,
-    //     });
-
-    //     var sliderCar = $('#sliderCar').data('sliderPro');
-    //     $('.arrow-left-slider-car').on('click', function (e) {
-    //       sliderCar.previousSlide();
-    //     })
-    //     $('.arrow-right-slider-car').on('click', function (e) {
-    //       sliderCar.nextSlide();
-    //     }) 
-
-    //   },
-    // }); 
+      $('.menu-show-elements').hover(function() {
+        $('.inside-menu').css('display', 'flex');
+      })
+      $('.inside-menu').mouseleave(function() {
+        $('.inside-menu').css('display', 'none');
+      })
 
 
 
-    //раскрытие пунктов на странице "Вопросы и ответы"
-    // $(".questions").find('li').find('a').click(function(e){
-    //   e.preventDefault();
-    //   $(this).toggleClass('active');
-    //   $(this).next('.questions__wrap').slideToggle(500);
-    // });
 
-    //видеоотзывы
-    // $("a.popupbox-video").fancybox({
-    //   allowfullscreen: 'true'
-    // });
+    var logoIcon = $(".header--inside").find(".logo").find('img');
+    if ($(window).width() <= 768) {
+        logoIcon.attr('src', 'images/logo-footer.svg');
+    }
 
+
+    
+    $(".factos__item").click(function(e){
+      $(this).find('.factos__wrap').slideToggle();
+      $(this).find('span').toggleClass('active');
+      $(this).find('img').toggleClass('active');
+    });
+
+
+
+    $(".activities__item").click(function(e){
+        e.preventDefault();
+        $(this).find('.activities__wrap').slideToggle();
+        $(this).find('.activities__details').find('a').toggleClass('active');
+        $(this).find('img').toggleClass('active');
+      });
+
+
+
+    $(".custom-radio").click(function(e){
+        var closestDiv = $(this).closest('div');
+        var siblings = closestDiv.siblings();
+        if (!(closestDiv.hasClass('active')))
+        {
+            closestDiv.addClass('active');
+            siblings.removeClass('active');
+        }
+        else {
+            closestDiv.removeClass('active');
+        }
+      });
     
 });
