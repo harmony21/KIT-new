@@ -99,7 +99,7 @@
 
                     <div class="links">
                         <a href="index.html"><img src="images/arrow-back.svg" alt="Вернуться назад"><span>Вернуться на шаг назад</span></a>
-                        <a href="javascript:void(0);" class="" data-fancybox data-src="#calculator"><img src="images/calculator-icon.svg" alt="Калькулятор"><span>Калькулятор</span></div>
+                        <a href="javascript:void(0);" class="links--calculate" data-fancybox data-src="#calculator"><img src="images/calculator-icon.svg" alt="Калькулятор"><span>Калькулятор</span></div>
                     </div>
                     
 
@@ -799,121 +799,121 @@
 
             <!--Рассчитать стоимость-->
             <div class="modal-window form-calculator" id="calculator">
-                    <img src="images/form-background.png" alt="Фон" class="form__background">
-                    <form action="" class="form-calc">
-                        <div class="form__title">
-                            <h3>Получить расчет от наших специалистов</h3>
-                        </div> 
-                        <div class="slider-pro form__slider" id="calculateSlider">
-                            <ul class="sp-slides">
-                                <li class="sp-slide">
-                                    <p>Полезная площадь (площадь всех внутренних помещений)</p>
-                                    <h4>Шаг 1</h4>
-                                    <div class="form__wrap">
-                                        <div>
-                                            <input class="custom-radio" name="square" type="radio" id="square-80" value="80">
-                                            <label for="square-80">80 кв.м.</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="square" type="radio" id="square-100" value="100">
-                                            <label for="square-100">100 кв.м.</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="square" type="radio" id="square-150" value="150">
-                                            <label for="square-150">150 кв.м.</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="square" type="radio" id="square-200" value="200">
-                                            <label for="square-200">200 кв.м.</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="square" type="radio" id="square-250" value="250">
-                                            <label for="square-250">250 кв.м.</label>
-                                        </div> 
-                                        <div>
-                                            <input class="custom-radio" name="square" type="radio" id="square-300" value="300">
-                                            <label for="square-300">300 кв.м.</label>
-                                        </div>                              
+                <img src="images/form-background.png" alt="Фон" class="form__background">
+                <form action="" class="form-calc">
+                    <div class="form__title">
+                        <h3>Получить расчет от наших специалистов</h3>
+                    </div> 
+                    <div class="slider-pro form__slider" id="calculateSlider">
+                        <ul class="sp-slides">
+                            <li class="sp-slide">
+                                <p>Полезная площадь (площадь всех внутренних помещений)</p>
+                                <h4>Шаг 1</h4>
+                                <div class="form__wrap">
+                                    <div>
+                                        <input class="custom-radio" name="square" type="radio" id="square-80" value="80">
+                                        <label for="square-80">80 кв.м.</label>
                                     </div>
-                                </li>
-                                <li class="sp-slide">
-                                    <p>Количество этажей</p>
-                                    <h4>Шаг 2</h4>
-                                    <div class="form__wrap form__wrap--straight">
-                                        <img src="images/form-house-icon.svg" alt="Иконка">
-                                        <div>
-                                            <input class="custom-radio" name="floors" type="radio" id="floors-1" value="1">
-                                            <label for="floors-1">Одноэтажный дом</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="floors" type="radio" id="floors-12" value="12">
-                                            <label for="floors-12">Один этаж с мансардой</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="floors" type="radio" id="floors-2" value="2">
-                                            <label for="floors-2">Двухэтажный дом</label>
-                                        </div>                           
+                                    <div>
+                                        <input class="custom-radio" name="square" type="radio" id="square-100" value="100">
+                                        <label for="square-100">100 кв.м.</label>
                                     </div>
-                                </li>
-                                <li class="sp-slide">
-                                    <p>Материал стен</p>
-                                    <h4>Шаг 3</h4>
-                                    <div class="form__wrap mobile-straight">
-                                        <div>
-                                            <input class="custom-radio" name="material" type="radio" id="material-1" value="Кирпич">
-                                            <label for="material-1">Кирпич</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="material" type="radio" id="material-2" value="Керамзитоблок">
-                                            <label for="material-2">Керамзитоблок</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="material" type="radio" id="material-3" value="Отсевоблок">
-                                            <label for="material-3">Отсевоблок</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="material" type="radio" id="material-4" value="Газобетон">
-                                            <label for="material-4">Газобетон</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="material" type="radio" id="material-5" value="Туфоблок">
-                                            <label for="material-5">Туфоблок</label>
-                                        </div>                              
+                                    <div>
+                                        <input class="custom-radio" name="square" type="radio" id="square-150" value="150">
+                                        <label for="square-150">150 кв.м.</label>
                                     </div>
-                                </li>
-                                <li class="sp-slide">
-                                    <div class="order-call">
-                                        <div class="form">
-                                            <div class="form__content">
-                                                <div class="form__fields">
-                                                    <input type="text" placeholder="Ваше имя">
-                                                    <input type="tel" placeholder="Ваш номер телефона +7 -"> 
-                                                </div>
-                                                <div class="form__fields">
-                                                    <input type="text" placeholder="Комментарий" class="full">
-                                                </div>
+                                    <div>
+                                        <input class="custom-radio" name="square" type="radio" id="square-200" value="200">
+                                        <label for="square-200">200 кв.м.</label>
+                                    </div>
+                                    <div>
+                                        <input class="custom-radio" name="square" type="radio" id="square-250" value="250">
+                                        <label for="square-250">250 кв.м.</label>
+                                    </div> 
+                                    <div>
+                                        <input class="custom-radio" name="square" type="radio" id="square-300" value="300">
+                                        <label for="square-300">300 кв.м.</label>
+                                    </div>                              
+                                </div>
+                            </li>
+                            <li class="sp-slide">
+                                <p>Количество этажей</p>
+                                <h4>Шаг 2</h4>
+                                <div class="form__wrap form__wrap--straight">
+                                    <img src="images/form-house-icon.svg" alt="Иконка">
+                                    <div>
+                                        <input class="custom-radio" name="floors" type="radio" id="floors-1" value="1">
+                                        <label for="floors-1">Одноэтажный дом</label>
+                                    </div>
+                                    <div>
+                                        <input class="custom-radio" name="floors" type="radio" id="floors-12" value="12">
+                                        <label for="floors-12">Один этаж с мансардой</label>
+                                    </div>
+                                    <div>
+                                        <input class="custom-radio" name="floors" type="radio" id="floors-2" value="2">
+                                        <label for="floors-2">Двухэтажный дом</label>
+                                    </div>                           
+                                </div>
+                            </li>
+                            <li class="sp-slide">
+                                <p>Материал стен</p>
+                                <h4>Шаг 3</h4>
+                                <div class="form__wrap mobile-straight">
+                                    <div>
+                                        <input class="custom-radio" name="material" type="radio" id="material-1" value="Кирпич">
+                                        <label for="material-1">Кирпич</label>
+                                    </div>
+                                    <div>
+                                        <input class="custom-radio" name="material" type="radio" id="material-2" value="Керамзитоблок">
+                                        <label for="material-2">Керамзитоблок</label>
+                                    </div>
+                                    <div>
+                                        <input class="custom-radio" name="material" type="radio" id="material-3" value="Отсевоблок">
+                                        <label for="material-3">Отсевоблок</label>
+                                    </div>
+                                    <div>
+                                        <input class="custom-radio" name="material" type="radio" id="material-4" value="Газобетон">
+                                        <label for="material-4">Газобетон</label>
+                                    </div>
+                                    <div>
+                                        <input class="custom-radio" name="material" type="radio" id="material-5" value="Туфоблок">
+                                        <label for="material-5">Туфоблок</label>
+                                    </div>                              
+                                </div>
+                            </li>
+                            <li class="sp-slide">
+                                <div class="order-call">
+                                    <div class="form">
+                                        <div class="form__content">
+                                            <div class="form__fields">
+                                                <input type="text" placeholder="Ваше имя">
+                                                <input type="tel" placeholder="Ваш номер телефона +7 -"> 
                                             </div>
-                                            <div class="form__bottom">
-                                                <a href="" class="btn">
-                                                    <span>Отправить</span>
-                                                    <img src="images/arrow-right.svg" alt="Отправить">
-                                                </a>
-                                                <p>Заполняя форму на сайте, вы соглашаетесь с нашей 
-                                                    <a href="">Политикой конфиденциальности</a>
-                                                </p>
+                                            <div class="form__fields">
+                                                <input type="text" placeholder="Комментарий" class="full">
                                             </div>
                                         </div>
-                                    </div>                                
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="form__links">
-                            <div class="form__link form__link--back"><img src="images/arrow-back.svg" alt=""><span>Предыдущий шаг</span></div>
-                            <div class="form__link form__link--forward"><span>Следующий шаг</span><img src="images/arrow-right-black.svg" alt=""></div>
-                        </div>
-                        
-                    </form>
-                </div>
+                                        <div class="form__bottom">
+                                            <a href="" class="btn">
+                                                <span>Отправить</span>
+                                                <img src="images/arrow-right.svg" alt="Отправить">
+                                            </a>
+                                            <p>Заполняя форму на сайте, вы соглашаетесь с нашей 
+                                                <a href="">Политикой конфиденциальности</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>                                
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form__links">
+                        <div class="form__link form__link--back"><img src="images/arrow-back.svg" alt=""><span>Предыдущий шаг</span></div>
+                        <div class="form__link form__link--forward"><span>Следующий шаг</span><img src="images/arrow-right-black.svg" alt=""></div>
+                    </div>
+                    
+                </form>
+            </div>
 
         
         </div>

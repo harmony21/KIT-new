@@ -489,7 +489,7 @@ table {
         bottom: 340px;
     }
     @media screen and (max-width:430px) {
-        bottom: 346px;
+        bottom: 355px;
     }
     ul {
         display: flex;
@@ -2304,11 +2304,23 @@ hr {
         }
     }
 }
+.mobile-list {
+    @include phones {
+        background: #E7EFFC;
+        padding: 15px;
+        box-sizing: border-box;
+        // width: 110%;
+        // // position: absolute;
+        // margin-left: -15px;
+        // position: absolute;
+
+    }
+}
 .activities {
     &--services {
         margin: 0;
         @include phones {
-            margin: 15px;
+            margin: 15px 0;
         }
         .activities__item {
             width: calc(98%/5);
@@ -2325,6 +2337,8 @@ hr {
             @include phones {
                 width: 100%;
                 height: auto;
+                // box-sizing: border-box;
+                // padding: 0 15px;
             }
             &:nth-child(3), &:nth-child(4) {
                 @include phones {
@@ -2339,13 +2353,24 @@ hr {
                     display: none;
                 }
             }
+            @include phones {
+                padding: 0 15px;
+            }
         }
         .activities__wrap {
             display: none;
             padding-bottom: 20px;
+            p {
+                @include phones {
+                    padding: 0 15px;
+                }
+            }
         }
         .activities__link {
             margin: 15px 0;
+            @include phones {
+                padding: 0 15px;
+            }
             img {
                 &.active {
                     transform: rotate(180deg);
@@ -2620,7 +2645,7 @@ hr {
         }
     }
 }
-//Галарея
+//Галерея
 .gallery-links {
     display: flex;
     align-items: center;
