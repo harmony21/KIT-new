@@ -1955,7 +1955,7 @@ hr {
       top: 10px; }
       @media screen and (max-width: 480px) {
         .footer__bottom:before {
-          top: 30px;
+          top: 70px;
           width: calc(100% - 40px);
           left: 20px; } }
   .footer--in-gallery {

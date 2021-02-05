@@ -1922,7 +1922,7 @@ hr {
             left: 60px;
             top: 10px;
             @include phones {
-               top: 30px;
+               top: 70px;
                width: calc(100% - 40px);
                left: 20px;
             }
