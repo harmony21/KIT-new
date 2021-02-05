@@ -1054,7 +1054,7 @@ table {
 @media screen and (max-width: 480px) {
   .section .desc-wrap-reason {
     padding: 0;
-    height: 117px;
+    height: 110px;
     overflow: hidden; }
     .section .desc-wrap-reason p {
       margin: 0; } }
