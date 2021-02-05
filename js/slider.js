@@ -185,6 +185,22 @@ $('.arrow-left-gallery-more-mobile').click(function(){
 });
 
 
+  //галерея в моб.версии "галерея подробно"
+  $('#imageGallery2').sliderPro({
+    buttons: false,
+    autoplay: false,
+  });  
+
+  var imageGallery2 = $('#imageGallery2').data('sliderPro');
+
+  $('.arrow-right-gallery-more-mobile').click(function(){
+  imageGallery2.nextSlide(); 
+  });
+  $('.arrow-left-gallery-more-mobile').click(function(){
+  imageGallery2.previousSlide(); 
+  });
+
+
 
     //Слайдер "почему к нам стоит обратиться"
     var reasonsSlider = $("#reasonsSlider");
