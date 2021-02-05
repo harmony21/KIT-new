@@ -2017,8 +2017,9 @@ hr {
     .mobile-menu .socials a img {
       width: 40px;
       margin-right: 20px; }
-    .mobile-menu .socials a:last-child {
-      font-size: 22px; }
+    @media screen and (max-width: 480px) {
+      .mobile-menu .socials a:last-child {
+        font-size: 20px; } }
   .mobile-menu .mail {
     text-transform: none; }
 
