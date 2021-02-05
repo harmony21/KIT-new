@@ -499,7 +499,7 @@ table {
       bottom: 315px; } }
   @media screen and (max-width: 425px) {
     .properties {
-      bottom: 340px; } }
+      bottom: 350px; } }
   .properties ul {
     display: -webkit-box;
     display: -ms-flexbox;
