@@ -8,8 +8,8 @@
         <link href="css/normalize.css" type="text/css" rel="stylesheet" />  
         <link href="css/jquery-ui-slider.css" type="text/css" rel="stylesheet" />  
         <link href="css/jquery.fancybox.min.css" type="text/css" rel="stylesheet" /> 
-        <link href="css/slider-pro.min.css" type="text/css" rel="stylesheet" /> 
         <link href="css/lightslider.min.css" type="text/css" rel="stylesheet" /> 
+        <link href="css/slider-pro.min.css" type="text/css" rel="stylesheet" /> 
         <link href="styles.css" type="text/css" rel="stylesheet" /> 
         <link href="template_styles.css" type="text/css" rel="stylesheet" /> 
     </head>
@@ -79,7 +79,7 @@
                                 <li class="menu__item"><a href="index.html">Главная</a></li>
                                 <li class="menu__item menu-show-elements"><a href="">Наши услуги</a></li>
                                 <li class="menu__item"><a href="price.html">Наши цены</a></li>
-                                <li class="menu__item"><a href="">Калькулятор</a></li>
+                                <li class="menu__item"><a href="" data-fancybox data-src="#calculator" class="menu__link calculator">Калькулятор</a></li>
                                 <li class="menu__item"><a href="news.html">Новости</a></li>
                                 <li class="menu__item"><a href="gallery.html">Галерея</a></li>
                                 <li class="menu__item"><a href="reviews.html">Отзывы</a></li>
@@ -97,7 +97,7 @@
                     </header>
 
                     <div class="links">
-                        <a href="index.html"><img src="images/arrow-back.svg" alt="Вернуться назад"><span>Вернуться на шаг назад</span></a>
+                        <a href="index.html" class="links__item-changable"><img src="images/arrow-back.svg" alt="Вернуться назад"><span>Вернуться на шаг назад</span></a>
                         <a href="javascript:void(0);" class="links--calculate" data-fancybox data-src="#calculator"><img src="images/calculator-icon.svg" alt="Калькулятор"><span>Калькулятор</span></div>
                     </div>
                     
@@ -117,6 +117,10 @@
                 <div class="news-more__intro news-more__intro--services">
                     <div class="news-more__pic">
                         <img src="temp/services-more__pic.jpg" alt="" style="filter:brightness(50%);">
+                    </div>
+                    <div class="news-more__category">
+                        <img src="images/house-icon-white.svg" alt="Малоэтажное строительство">
+                        <a href="services.html">Малоэтажное строительство</a>
                     </div>
                     <div class="news-more__title">
                         <h2>Кирпичные<br>дома</h2>
@@ -157,28 +161,71 @@
                 </div>
                 
                 <div class="news-more__desc">
-                    <div class="news-more__block">
-                        <p>
-                            Прочные и долговечные кирпичные дома за несколько сотен лет активной эскплуатации получили заслуженную репутацию одних из самых надежных вариантов для возведения жилища. Хотите, чтобы и ваш дом простоял не одно поколение и стал родовым гнездом вашей семьи, передающимся по наследству детям и внукам? Тогда рекомендуем остановить выбор на жилище из качественного кирпича, профессионально спроектировать и построить который Вам помогут специалисты нашей компании.
-                        </p>
-                        <p>
-                            Строительная компания "КИТ" выполнит полный спектр услуг по строительству домов: от разметки участка, закладки фундамента до финальных отделочных фасадных и внутренних работ. Наши специалисты имеют многолетний опыт в строительной сфере и проктировании любых видов зданий, а также квалифицированный персонал, готовый помочь Вам разобраться в любом вопросе.
-                        </p>
+                    <div class="news-more__block special services-more">
+
+                        <div class="news-more__design-block"></div>
+                        <div class="desc-wrap">
+                            <div class="desc">
+                                <p>
+                                    Прочные и долговечные кирпичные дома за несколько сотен лет активной эскплуатации получили заслуженную 
+                                    репутацию одних из самых надежных вариантов для возведения жилища. 
+                                    Хотите, чтобы и ваш дом простоял не одно поколение и стал родовым гнездом вашей семьи, передающимся по наследству детям и внукам? Тогда рекомендуем остановить выбор на жилище 
+                                    из качественного кирпича, профессионально спроектировать и построить который Вам помогут специалисты нашей компании.
+                                </p>
+                                <p>
+                                    Строительная компания "КИТ" выполнит полный спектр услуг по строительству домов: от разметки участка, закладки фундамента до финальных отделочных фасадных и внутренних работ. Наши специалисты имеют многолетний опыт в строительной сфере и проктировании любых видов зданий, а также квалифицированный персонал, готовый помочь Вам разобраться в любом вопросе.
+                                </p>
+                            </div>
+                        </div>
+ 
                     </div>
 
-                    <h4 style="color: #1253C0; text-transform: uppercase;">Что дает вам сотрудничество с компанией "КИТ"?</h4>
-                    <ul class="reasons" id="reasonsSlider">
-                        <li>Долговечность и прочность, средний срок службы просттого кирпича - более 100 лет</li>
-                        <li>Устойчивость к любым атмосферным воздействиям: ветры, ливни, снег ему нипочем</li>
-                        <li>Прекрасная шумоизоляция, большая тепловая инерция и высокая морозостойкость</li>
-                        <li>Кирпич - самый экологичный из неорганических стройматериалов, он изготавливается из красноый глины, воды и песка и содержит минимум любых добавок</li>
-                        <li>Возведен дом в строгом соответствии с заранее оговоренными сроками</li>
-                    </ul>
+                    <a href="javascript:void(0);" class="btn-more btn-more-desc">
+                        <img src="images/arrow-right-black.svg" alt="">
+                        <span>Развернуть текст</span>
+                    </a>
 
-                    <h4 style=" text-transform: uppercase;">Что дает вам сотрудничество с компанией "КИТ"?</h4>
-                    <p>С нами создание собственного дома в Хабаровске перестанет представляться сложной задачей, мы представим поэтапный план возведения дома с четко установленными сроками.</p>
-                    <p>Помните, что стены из кирпича обладают большим весом по сравнению с деревянными и керамзитными, поэтому требуют вдумчивого подхода к расчетам устойчивости здания, установке фундамента и его выдержке. В вопросе создания объектов из данного материала лучше работать с доказавшими свои знания на практике мастерами своего дела. За 10 лет работы в строительной сфере компания "КИТ" может похвастаться десятками успешно завершенных проектов. Наша команда профессионалов возводит также деревянные и комбинированные дома (первый этаж каменный, второй этаж из бруса), а также из керамзитоблоков и отсевоблоков. Мы обеспечим технический надзор за качеством на всех этапах строительства. Ознакомтесь со списком наших услуг, мы гарантируем, что вы сможете заказать дом своей мечты, который будет отвечать вашим потребностям и соответствовать возможностям.</p>
-                   
+                    <hr style="width:100%;background:#1253C0;margin-top:0;">
+
+
+
+                    <div class="reasons-wrap special">
+                        <h4 style="color: #1253C0; text-transform: uppercase;">Что дает вам сотрудничество с компанией "КИТ"?</h4>
+                        <ul class="reasons" id="reasonsSlider">
+                            <li>Долговечность и прочность, средний срок службы простого кирпича - более 100 лет</li>
+                            <li>Устойчивость к любым атмосферным воздействиям: ветры, ливни, снег ему нипочем</li>
+                            <li>Прекрасная шумоизоляция, большая тепловая инерция и высокая морозостойкость</li>
+                            <li>Кирпич - самый экологичный из неорганических стройматериалов, он изготавливается из красноый глины, воды и песка и содержит минимум любых добавок</li>
+                            <li>Возведен дом в строгом соответствии с заранее оговоренными сроками</li>
+                        </ul>
+
+                        <h4 style=" text-transform: uppercase;">Что дает вам сотрудничество с компанией "КИТ"?</h4>
+
+                        <div class="desc-wrap-reason">
+                            <div class="desc-reason">
+                                <p>С нами создание собственного дома в Хабаровске перестанет представляться сложной задачей, 
+                                    мы представим поэтапный план возведения дома с четко установленными сроками.</p>
+                                <p>Помните, что стены из кирпича обладают большим весом по сравнению с деревянными и керамзитными, 
+                                    поэтому требуют вдумчивого подхода к расчетам устойчивости здания, установке фундамента и его выдержке. 
+                                    В вопросе создания объектов из данного материала лучше работать с доказавшими свои знания на практике 
+                                    мастерами своего дела. За 10 лет работы в строительной сфере компания "КИТ" может похвастаться десятками 
+                                    успешно завершенных проектов. Наша команда профессионалов возводит также деревянные и комбинированные 
+                                    дома (первый этаж каменный, второй этаж из бруса), а также из керамзитоблоков и отсевоблоков. 
+                                    Мы обеспечим технический надзор за качеством на всех этапах строительства. Ознакомтесь со списком 
+                                    наших услуг, мы гарантируем, что вы сможете заказать дом своей мечты, который будет отвечать вашим 
+                                    потребностям и соответствовать возможностям.
+                                </p>
+                            </div>
+                        </div>
+
+                        <a href="javascript:void(0);" class="btn-more btn-more-reason">
+                            <img src="images/arrow-right-black.svg" alt="">
+                            <span>Развернуть текст</span>
+                        </a>
+
+                    </div>
+
+
                     <div class="gallery-wrap gallery-wrap--inside">
                         <a href="javascript:void(0);" class="arrow arrow-left arrow-left-gallery-more"><img src="images/arrow-left-white.svg" alt="Назад"></a>
                         <div class="gallery gallery--inside" id="gallerySlideMore">
@@ -190,10 +237,79 @@
                             <div class="gallery__item" style="background:url('temp/slide-1.jpg');background-size:cover;"></div>
                             <div class="gallery__item" style="background:url('temp/slide-2.jpg');background-size:cover;"></div>
                             <div class="gallery__item" style="background:url('temp/slide-3.jpg');background-size:cover;"></div>
-                            <div class="gallery__item" style="background:url('temp/slide-4.jpg');background-size:cover;"></div>
+                            <div class="gallery__item" style="background:url('temp/slide-4.jpg');background-size:cover;"></div> 
                         </div>
                         <a href="javascript:void(0);" class="arrow arrow-right arrow-right-gallery-more"><img src="images/arrow-right-white.svg" alt="Вперед"></a>
                     </div>
+
+
+
+                    <!--Галерея для мобилок-->
+                    <div class="gallery-wrap gallery-wrap--inside gallery-wrap--inside--mobile"> 
+                        <a href="javascript:void(0);" class="arrow arrow-left arrow-left-gallery-more-mobile"><img src="images/arrow-left-white.svg" alt="Назад"></a>
+                        <div class="gallery gallery--inside slider-pro" id="imageGallery">
+                            <div class="sp-slides">
+                                <div class="sp-slide">
+                                    <img src="temp/slide-1.jpg" alt="">
+                                </div>
+                                <div class="sp-slide">
+                                    <img src="temp/slide-2.jpg" alt="">
+                                </div>
+                                <div class="sp-slide">
+                                    <img src="temp/slide-3.jpg" alt="">
+                                </div>
+                                <div class="sp-slide">
+                                    <img src="temp/slide-4.jpg" alt="">
+                                </div>
+                                <div class="sp-slide">
+                                    <img src="temp/slide-5.jpg" alt="">
+                                </div>
+                                <div class="sp-slide">
+                                    <img src="temp/slide-1.jpg" alt="">
+                                </div>
+                                <div class="sp-slide">
+                                    <img src="temp/slide-2.jpg" alt="">
+                                </div>
+                                <div class="sp-slide">
+                                    <img src="temp/slide-3.jpg" alt="">
+                                </div>
+                                <div class="sp-slide">
+                                    <img src="temp/slide-4.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <div class="sp-thumbnails">
+                                <div class="sp-thumbnail">
+                                    <img src="temp/slide-1.jpg" alt="">
+                                </div>
+                                <div class="sp-thumbnail">
+                                    <img src="temp/slide-2.jpg" alt="">
+                                </div>
+                                <div class="sp-thumbnail">
+                                    <img src="temp/slide-3.jpg" alt="">
+                                </div>
+                                <div class="sp-thumbnail">
+                                    <img src="temp/slide-4.jpg" alt="">
+                                </div>
+                                <div class="sp-thumbnail">
+                                    <img src="temp/slide-5.jpg" alt="">
+                                </div>
+                                <div class="sp-thumbnail">
+                                    <img src="temp/slide-1.jpg" alt="">
+                                </div>
+                                <div class="sp-thumbnail">
+                                    <img src="temp/slide-2.jpg" alt="">
+                                </div>
+                                <div class="sp-thumbnail">
+                                    <img src="temp/slide-3.jpg" alt="">
+                                </div>
+                                <div class="sp-thumbnail">
+                                    <img src="temp/slide-4.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0);" class="arrow arrow-right arrow-right-gallery-more-mobile"><img src="images/arrow-right-white.svg" alt="Вперед"></a>
+                    </div> 
                 </div>
 
                 <div class="variation">
@@ -556,7 +672,7 @@
             </section>
 
             <!--Уже сделали расчет?-->
-            <section class="section section--made-calculate" style="background:url('temp/calculate-background.jpg');background-position:center center;background-size:cover;background-repeat:no-repeat;">
+            <section class="section section--made-calculate" style="background:url('temp/calculate-background.jpg');background-position:center center;background-size:cover;background-repeat:no-repeat;"> -->
                 <div class="calculate-condition">
                     <div class="calculate-condition__left">
                         <h2>Уже сделали расчет в другой компании?</h2>
@@ -676,7 +792,7 @@
                     <div class="factos">
                         <h2 class="section-title">
                             <img src="images/scales-icon.svg" alt="Факторы">
-                            Какие факторы влияют на итоговую стоимость вашего дома?
+                            <span>Какие факторы влияют на итоговую стоимость вашего дома?</span> 
                         </h2>
                         <ul class="factos__list">
                             <li class="factos__item">
@@ -712,7 +828,7 @@
             </section>
 
             <!--Наши выполненные объекты-->
-            <section class="section section--mobile-hidden" style="margin-bottom: 50px;">
+            <section class="section section--services-more--objects" style="margin-bottom: 50px;">
                 <h2 class="section-title">Наши выполненные объекты</h2>
                 <p><a href="gallery.html">Посмотреть все выполненные объекты</a></p>
                 <div class="gallery-wrap">
@@ -1076,6 +1192,39 @@
                     </div>
                     <a href="javascript:void(0);" class="arrow arrow-right arrow-right-gallery"><img src="images/arrow-right-white.svg" alt="Вперед"></a>
                 </div>
+
+
+                <div class="gallery-wrap gallery-wrap--mobile">
+                    <div class="gallery__item" style="background:url('temp/project-pic-3.jpg');background-size:cover;">
+                        <div class="gallery__desc">
+                            <div class="gallery__left">
+                                <div class="gallery__icon"></div>
+                                <a href="gallery-more.html">
+                                    <img src="images/arrow-right.svg" alt="Подробнее">
+                                    <span>Подробнее</span>
+                                </a>
+                            </div>
+                            <div class="gallery__right">
+                                <img src="images/square-icon.svg" alt="Площадь">
+                                <span>123 м <sup>2</sup></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery__item all-objects">
+                        <img src="images/house-icon-white.svg" alt="Все выполненные работы">
+                        <h4>Все выполненные объекты</h4>
+                        <a href="gallery.html">
+                            <img src="images/arrow-right.svg" alt="Все объекты">
+                            <span>Смотреть все объекты</span>
+                        </a>
+                    </div>
+                </div>
+                
+
+
+
+
+
                 
             </section>
 
@@ -1108,7 +1257,7 @@
                         <p>г. Хабаровск, ул. Металлистов 1а, офис № 207</p>
                         <p>Режим работы: Пн.-Вс. 9.00-21.00</p>
                     </div>
-                    <a href="" class="btn">
+                    <a href="" data-fancybox data-src="#order-call" class="btn footer-order-call">
                         <span>Заказать звонок</span>
                         <img src="images/arrow-right.svg" alt="Написать в WhatsApp">
                     </a>
@@ -1119,7 +1268,7 @@
                         <a href="index.html">Главная</a>
                         <a href="services.html">Наши услуги</a>
                         <a href="price.html">Наши цены</a>
-                        <a href="">Калькулятор</a>
+                        <a href="" data-fancybox data-src="#calculator" class="menu__link calculator">Калькулятор</a>
                         <a href="news.html">Новости</a>
                         <a href="gallery.html">Галерея</a>
                         <a href="reviews.html">Отзывы</a>
@@ -1148,7 +1297,8 @@
             <!--Мобильное меню-->
             <div class="modal-window mobile-menu" id="mobile-menu">
                 <a href="index.html" class="logo">
-                    <img src="images/logo.svg" alt="Строительная компания 'КИТ'">
+                    <img src="images/logo-footer.svg" alt="Строительная компания 'КИТ'"><br>
+                    <span>Проектирование и строительство домов под ключ</span>
                 </a>
                 <a href="" class="btn btn--green">
                     <span>Написать в WhatsApp</span>
@@ -1204,123 +1354,136 @@
                 </form>
             </div>
 
-            <!--Рассчитать стоимость-->
-            <div class="modal-window form-calculator" id="calculator">
-                    <img src="images/form-background.png" alt="Фон" class="form__background">
-                    <form action="" class="form-calc">
-                        <div class="form__title">
-                            <h3>Получить расчет от наших специалистов</h3>
-                        </div> 
-                        <div class="slider-pro form__slider" id="calculateSlider">
-                            <ul class="sp-slides">
-                                <li class="sp-slide">
-                                    <p>Полезная площадь (площадь всех внутренних помещений)</p>
-                                    <h4>Шаг 1</h4>
-                                    <div class="form__wrap">
-                                        <div>
-                                            <input class="custom-radio" name="square" type="radio" id="square-80" value="80">
-                                            <label for="square-80">80 кв.м.</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="square" type="radio" id="square-100" value="100">
-                                            <label for="square-100">100 кв.м.</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="square" type="radio" id="square-150" value="150">
-                                            <label for="square-150">150 кв.м.</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="square" type="radio" id="square-200" value="200">
-                                            <label for="square-200">200 кв.м.</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="square" type="radio" id="square-250" value="250">
-                                            <label for="square-250">250 кв.м.</label>
-                                        </div> 
-                                        <div>
-                                            <input class="custom-radio" name="square" type="radio" id="square-300" value="300">
-                                            <label for="square-300">300 кв.м.</label>
-                                        </div>                              
+             <!--Рассчитать стоимость-->
+             <div class="modal-window form-calculator" id="calculator">
+                <img src="images/form-background.png" alt="Фон" class="form__background">
+                <form action="" class="form-calc">
+                    <div class="form__title">
+                        <h3>Получить расчет от наших специалистов</h3>
+                    </div> 
+                    <div class="slider-pro form__slider" id="calculateSlider">
+                        <ul class="sp-slides">
+                            <li class="sp-slide first">
+                                <p>Полезная площадь (площадь всех внутренних помещений)</p>
+                                <h4>Шаг 1</h4>
+                                <div class="form__wrap">
+                                    <div>
+                                        <input class="custom-radio" name="square" type="radio" id="square-80" value="80">
+                                        <label for="square-80">80 кв.м.</label>
                                     </div>
-                                </li>
-                                <li class="sp-slide">
-                                    <p>Количество этажей</p>
-                                    <h4>Шаг 2</h4>
-                                    <div class="form__wrap form__wrap--straight">
-                                        <img src="images/form-house-icon.svg" alt="Иконка">
-                                        <div>
-                                            <input class="custom-radio" name="floors" type="radio" id="floors-1" value="1">
-                                            <label for="floors-1">Одноэтажный дом</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="floors" type="radio" id="floors-12" value="12">
-                                            <label for="floors-12">Один этаж с мансардой</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="floors" type="radio" id="floors-2" value="2">
-                                            <label for="floors-2">Двухэтажный дом</label>
-                                        </div>                           
+                                    <div>
+                                        <input class="custom-radio" name="square" type="radio" id="square-100" value="100">
+                                        <label for="square-100">100 кв.м.</label>
                                     </div>
-                                </li>
-                                <li class="sp-slide">
-                                    <p>Материал стен</p>
-                                    <h4>Шаг 3</h4>
-                                    <div class="form__wrap mobile-straight">
-                                        <div>
-                                            <input class="custom-radio" name="material" type="radio" id="material-1" value="Кирпич">
-                                            <label for="material-1">Кирпич</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="material" type="radio" id="material-2" value="Керамзитоблок">
-                                            <label for="material-2">Керамзитоблок</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="material" type="radio" id="material-3" value="Отсевоблок">
-                                            <label for="material-3">Отсевоблок</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="material" type="radio" id="material-4" value="Газобетон">
-                                            <label for="material-4">Газобетон</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="material" type="radio" id="material-5" value="Туфоблок">
-                                            <label for="material-5">Туфоблок</label>
-                                        </div>                              
+                                    <div>
+                                        <input class="custom-radio" name="square" type="radio" id="square-150" value="150">
+                                        <label for="square-150">150 кв.м.</label>
                                     </div>
-                                </li>
-                                <li class="sp-slide">
-                                    <div class="order-call">
-                                        <div class="form">
-                                            <div class="form__content">
-                                                <div class="form__fields">
-                                                    <input type="text" placeholder="Ваше имя">
-                                                    <input type="tel" placeholder="Ваш номер телефона +7 -"> 
-                                                </div>
-                                                <div class="form__fields">
-                                                    <input type="text" placeholder="Комментарий" class="full">
-                                                </div>
+                                    <div>
+                                        <input class="custom-radio" name="square" type="radio" id="square-200" value="200">
+                                        <label for="square-200">200 кв.м.</label>
+                                    </div>
+                                    <div>
+                                        <input class="custom-radio" name="square" type="radio" id="square-250" value="250">
+                                        <label for="square-250">250 кв.м.</label>
+                                    </div> 
+                                    <div>
+                                        <input class="custom-radio" name="square" type="radio" id="square-300" value="300">
+                                        <label for="square-300">300 кв.м.</label>
+                                    </div>                              
+                                </div>
+                            </li>
+                            <li class="sp-slide">
+                                <p>Количество этажей</p>
+                                <h4>Шаг 2</h4>
+                                <div class="form__wrap form__wrap--straight">
+                                    <img src="images/form-house-icon.svg" alt="Иконка">
+                                    <div>
+                                        <input class="custom-radio" name="floors" type="radio" id="floors-1" value="1">
+                                        <label for="floors-1">Одноэтажный дом</label>
+                                    </div>
+                                    <div>
+                                        <input class="custom-radio" name="floors" type="radio" id="floors-12" value="12">
+                                        <label for="floors-12">Один этаж с мансардой</label>
+                                    </div>
+                                    <div>
+                                        <input class="custom-radio" name="floors" type="radio" id="floors-2" value="2">
+                                        <label for="floors-2">Двухэтажный дом</label>
+                                    </div>                           
+                                </div>
+                            </li>
+                            <li class="sp-slide middle">
+                                <p>Материал стен</p>
+                                <h4>Шаг 3</h4>
+                                <div class="form__wrap mobile-straight">
+                                    <div>
+                                        <input class="custom-radio" name="material" type="radio" id="material-1" value="Кирпич">
+                                        <label for="material-1">Кирпич</label>
+                                    </div>
+                                    <div>
+                                        <input class="custom-radio" name="material" type="radio" id="material-2" value="Керамзитоблок">
+                                        <label for="material-2">Керамзитоблок</label>
+                                    </div>
+                                    <div>
+                                        <input class="custom-radio" name="material" type="radio" id="material-3" value="Отсевоблок">
+                                        <label for="material-3">Отсевоблок</label>
+                                    </div>
+                                    <div>
+                                        <input class="custom-radio" name="material" type="radio" id="material-4" value="Газобетон">
+                                        <label for="material-4">Газобетон</label>
+                                    </div>
+                                    <div>
+                                        <input class="custom-radio" name="material" type="radio" id="material-5" value="Туфоблок">
+                                        <label for="material-5">Туфоблок</label>
+                                    </div> 
+                                    
+                                    <!--выбор кровли (для мобильных)-->
+                                    <div class="type-roof">
+                                        <div>
+                                            <input class="custom-radio" name="roof" type="radio" id="roof-1" value="1">
+                                            <label for="roof-1">Холодная кровля</label>
+                                        </div>
+                                        <div>
+                                            <input class="custom-radio" name="roof" type="radio" id="roof-2" value="2">
+                                            <label for="roof-2">Теплая кровля</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="sp-slide last">
+                                <div class="order-call">
+                                    <div class="form">
+                                        <div class="form__content">
+                                            <div class="form__fields">
+                                                <input type="text" placeholder="Ваше имя">
+                                                <input type="tel" placeholder="Ваш номер телефона +7 -"> 
                                             </div>
-                                            <div class="form__bottom">
-                                                <a href="" class="btn">
-                                                    <span>Отправить</span>
-                                                    <img src="images/arrow-right.svg" alt="Отправить">
-                                                </a>
-                                                <p>Заполняя форму на сайте, вы соглашаетесь с нашей 
-                                                    <a href="">Политикой конфиденциальности</a>
-                                                </p>
+                                            <div class="form__fields">
+                                                <input type="text" placeholder="Комментарий" class="full">
                                             </div>
                                         </div>
-                                    </div>                                
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="form__links">
-                            <div class="form__link form__link--back"><img src="images/arrow-back.svg" alt=""><span>Предыдущий шаг</span></div>
-                            <div class="form__link form__link--forward"><span>Следующий шаг</span><img src="images/arrow-right-black.svg" alt=""></div>
-                        </div>
-                        
-                    </form>
-                </div>
+                                        <div class="form__bottom">
+                                            <a href="" class="btn">
+                                                <span>Отправить</span>
+                                                <img src="images/arrow-right.svg" alt="Отправить">
+                                            </a>
+                                            <p>Заполняя форму на сайте, вы соглашаетесь с нашей 
+                                                <a href="">Политикой конфиденциальности</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>                                
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form__links">
+                        <div class="form__link form__link--back"><img src="images/arrow-back.svg" alt=""><span>Предыдущий шаг</span></div>
+                        <div class="form__link form__link--forward"><span>Следующий шаг</span><img src="images/arrow-right-black.svg" alt=""></div>
+                    </div>
+                    
+                </form>
+                <img src="images/img-calc.png" alt="Pic" class="calculator-img">
+            </div>
 
         
         </div>
@@ -1334,7 +1497,7 @@
         <script src="js/lightslider.min.js"></script>
         <script src="js/jquery.sliderPro.min.js"></script>
         <script src="js/slider.js"></script>
-        <script src="js/map-contacts.js"></script>
+        <!-- <script src="js/map-contacts.js"></script> -->
         <script src="js/main.js"></script>
     </body>
 </html>

@@ -79,7 +79,7 @@
                                 <li class="menu__item"><a href="index.html">Главная</a></li>
                                 <li class="menu__item menu-show-elements"><a href="">Наши услуги</a></li>
                                 <li class="menu__item"><a href="price.html">Наши цены</a></li>
-                                <li class="menu__item"><a href="">Калькулятор</a></li>
+                                <li class="menu__item"><a href="" data-fancybox data-src="#calculator" class="menu__link calculator">Калькулятор</a></li>
                                 <li class="menu__item"><a href="news.html">Новости</a></li>
                                 <li class="menu__item"><a href="gallery.html">Галерея</a></li>
                                 <li class="menu__item"><a href="reviews.html">Отзывы</a></li>
@@ -126,14 +126,27 @@
                 
 
                 <div class="news-more__desc">
-                    <div>
-                        <p>
-                            При выборе материалов для строительства дома, заказчики предпочитают покупать экологически безопасную продукцию. Чтобы не ошибиться в покупке, очень важно внимательно ознакомиться с отзывами экспертов о производителе данной продукции. Сегодня многие из них работают над разработкой новых технологий получения экологической продукции.
-                        </p>
-                        <p>
-                            В настоящее время для строительства домов широко применяется газобетон. Он предназначен для строительных работ в больших масштабах. Газобетона был изобретен в середине 1920-х годов шведским архитектором и изобретателем Акселем Эрикссоном. 
-                        </p>
+
+                    <div class="news-more__block special">
+
+                        <div class="news-more__design-block"></div>
+                        <div class="desc-wrap">
+                            <div class="desc">
+                                <p>
+                                    При выборе материалов для строительства дома, заказчики предпочитают покупать экологически безопасную продукцию. Чтобы не ошибиться в покупке, очень важно внимательно ознакомиться с отзывами экспертов о производителе данной продукции. Сегодня многие из них работают над разработкой новых технологий получения экологической продукции.
+                                </p>
+                                <p>
+                                    В настоящее время для строительства домов широко применяется газобетон. Он предназначен для строительных работ в больших масштабах. Газобетона был изобретен в середине 1920-х годов шведским архитектором и изобретателем Акселем Эрикссоном.  
+                                </p>
+                            </div>
+                        </div>
+                        
+                        
+    
                     </div>
+
+                    <hr style="width:100%;background:#1253C0;margin-top:0;">
+
                     <p>
                         Производится газобетон на основе кварцевого песка, цемента и извести. К ним добавляются также специализированные газообразователи, которые ответственны за типичный объем и микроструктуру материала. В состав этих газообразователей входит 0,01 % алюминиевой пудры, которая по окончании процесса получения газобетона, остается в составе нейтральных соединений. Для затвердения газобетон подвергается сушке паром в автоклаве при очень высокой температуре.
                     </p>
@@ -161,9 +174,6 @@
                     </a>
                 </div>
 
-
-               
-       
             </section>
 
             <!--Похожие новости-->
@@ -632,7 +642,7 @@
                         <p>г. Хабаровск, ул. Металлистов 1а, офис № 207</p>
                         <p>Режим работы: Пн.-Вс. 9.00-21.00</p>
                     </div>
-                    <a href="" class="btn">
+                    <a href="" data-fancybox data-src="#order-call" class="btn footer-order-call">
                         <span>Заказать звонок</span>
                         <img src="images/arrow-right.svg" alt="Написать в WhatsApp">
                     </a>
@@ -643,7 +653,7 @@
                         <a href="index.html">Главная</a>
                         <a href="services.html">Наши услуги</a>
                         <a href="price.html">Наши цены</a>
-                        <a href="">Калькулятор</a>
+                        <a href="" data-fancybox data-src="#calculator" class="menu__link calculator">Калькулятор</a>
                         <a href="news.html">Новости</a>
                         <a href="gallery.html">Галерея</a>
                         <a href="reviews.html">Отзывы</a>
@@ -672,7 +682,8 @@
             <!--Мобильное меню-->
             <div class="modal-window mobile-menu" id="mobile-menu">
                 <a href="index.html" class="logo">
-                    <img src="images/logo.svg" alt="Строительная компания 'КИТ'">
+                    <img src="images/logo-footer.svg" alt="Строительная компания 'КИТ'"><br>
+                    <span>Проектирование и строительство домов под ключ</span>
                 </a>
                 <a href="" class="btn btn--green">
                     <span>Написать в WhatsApp</span>
@@ -728,123 +739,136 @@
                 </form>
             </div>
 
-            <!--Рассчитать стоимость-->
-            <div class="modal-window form-calculator" id="calculator">
-                    <img src="images/form-background.png" alt="Фон" class="form__background">
-                    <form action="" class="form-calc">
-                        <div class="form__title">
-                            <h3>Получить расчет от наших специалистов</h3>
-                        </div> 
-                        <div class="slider-pro form__slider" id="calculateSlider">
-                            <ul class="sp-slides">
-                                <li class="sp-slide">
-                                    <p>Полезная площадь (площадь всех внутренних помещений)</p>
-                                    <h4>Шаг 1</h4>
-                                    <div class="form__wrap">
-                                        <div>
-                                            <input class="custom-radio" name="square" type="radio" id="square-80" value="80">
-                                            <label for="square-80">80 кв.м.</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="square" type="radio" id="square-100" value="100">
-                                            <label for="square-100">100 кв.м.</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="square" type="radio" id="square-150" value="150">
-                                            <label for="square-150">150 кв.м.</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="square" type="radio" id="square-200" value="200">
-                                            <label for="square-200">200 кв.м.</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="square" type="radio" id="square-250" value="250">
-                                            <label for="square-250">250 кв.м.</label>
-                                        </div> 
-                                        <div>
-                                            <input class="custom-radio" name="square" type="radio" id="square-300" value="300">
-                                            <label for="square-300">300 кв.м.</label>
-                                        </div>                              
+             <!--Рассчитать стоимость-->
+             <div class="modal-window form-calculator" id="calculator">
+                <img src="images/form-background.png" alt="Фон" class="form__background">
+                <form action="" class="form-calc">
+                    <div class="form__title">
+                        <h3>Получить расчет от наших специалистов</h3>
+                    </div> 
+                    <div class="slider-pro form__slider" id="calculateSlider">
+                        <ul class="sp-slides">
+                            <li class="sp-slide first">
+                                <p>Полезная площадь (площадь всех внутренних помещений)</p>
+                                <h4>Шаг 1</h4>
+                                <div class="form__wrap">
+                                    <div>
+                                        <input class="custom-radio" name="square" type="radio" id="square-80" value="80">
+                                        <label for="square-80">80 кв.м.</label>
                                     </div>
-                                </li>
-                                <li class="sp-slide">
-                                    <p>Количество этажей</p>
-                                    <h4>Шаг 2</h4>
-                                    <div class="form__wrap form__wrap--straight">
-                                        <img src="images/form-house-icon.svg" alt="Иконка">
-                                        <div>
-                                            <input class="custom-radio" name="floors" type="radio" id="floors-1" value="1">
-                                            <label for="floors-1">Одноэтажный дом</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="floors" type="radio" id="floors-12" value="12">
-                                            <label for="floors-12">Один этаж с мансардой</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="floors" type="radio" id="floors-2" value="2">
-                                            <label for="floors-2">Двухэтажный дом</label>
-                                        </div>                           
+                                    <div>
+                                        <input class="custom-radio" name="square" type="radio" id="square-100" value="100">
+                                        <label for="square-100">100 кв.м.</label>
                                     </div>
-                                </li>
-                                <li class="sp-slide">
-                                    <p>Материал стен</p>
-                                    <h4>Шаг 3</h4>
-                                    <div class="form__wrap mobile-straight">
-                                        <div>
-                                            <input class="custom-radio" name="material" type="radio" id="material-1" value="Кирпич">
-                                            <label for="material-1">Кирпич</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="material" type="radio" id="material-2" value="Керамзитоблок">
-                                            <label for="material-2">Керамзитоблок</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="material" type="radio" id="material-3" value="Отсевоблок">
-                                            <label for="material-3">Отсевоблок</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="material" type="radio" id="material-4" value="Газобетон">
-                                            <label for="material-4">Газобетон</label>
-                                        </div>
-                                        <div>
-                                            <input class="custom-radio" name="material" type="radio" id="material-5" value="Туфоблок">
-                                            <label for="material-5">Туфоблок</label>
-                                        </div>                              
+                                    <div>
+                                        <input class="custom-radio" name="square" type="radio" id="square-150" value="150">
+                                        <label for="square-150">150 кв.м.</label>
                                     </div>
-                                </li>
-                                <li class="sp-slide">
-                                    <div class="order-call">
-                                        <div class="form">
-                                            <div class="form__content">
-                                                <div class="form__fields">
-                                                    <input type="text" placeholder="Ваше имя">
-                                                    <input type="tel" placeholder="Ваш номер телефона +7 -"> 
-                                                </div>
-                                                <div class="form__fields">
-                                                    <input type="text" placeholder="Комментарий" class="full">
-                                                </div>
+                                    <div>
+                                        <input class="custom-radio" name="square" type="radio" id="square-200" value="200">
+                                        <label for="square-200">200 кв.м.</label>
+                                    </div>
+                                    <div>
+                                        <input class="custom-radio" name="square" type="radio" id="square-250" value="250">
+                                        <label for="square-250">250 кв.м.</label>
+                                    </div> 
+                                    <div>
+                                        <input class="custom-radio" name="square" type="radio" id="square-300" value="300">
+                                        <label for="square-300">300 кв.м.</label>
+                                    </div>                              
+                                </div>
+                            </li>
+                            <li class="sp-slide">
+                                <p>Количество этажей</p>
+                                <h4>Шаг 2</h4>
+                                <div class="form__wrap form__wrap--straight">
+                                    <img src="images/form-house-icon.svg" alt="Иконка">
+                                    <div>
+                                        <input class="custom-radio" name="floors" type="radio" id="floors-1" value="1">
+                                        <label for="floors-1">Одноэтажный дом</label>
+                                    </div>
+                                    <div>
+                                        <input class="custom-radio" name="floors" type="radio" id="floors-12" value="12">
+                                        <label for="floors-12">Один этаж с мансардой</label>
+                                    </div>
+                                    <div>
+                                        <input class="custom-radio" name="floors" type="radio" id="floors-2" value="2">
+                                        <label for="floors-2">Двухэтажный дом</label>
+                                    </div>                           
+                                </div>
+                            </li>
+                            <li class="sp-slide middle">
+                                <p>Материал стен</p>
+                                <h4>Шаг 3</h4>
+                                <div class="form__wrap mobile-straight">
+                                    <div>
+                                        <input class="custom-radio" name="material" type="radio" id="material-1" value="Кирпич">
+                                        <label for="material-1">Кирпич</label>
+                                    </div>
+                                    <div>
+                                        <input class="custom-radio" name="material" type="radio" id="material-2" value="Керамзитоблок">
+                                        <label for="material-2">Керамзитоблок</label>
+                                    </div>
+                                    <div>
+                                        <input class="custom-radio" name="material" type="radio" id="material-3" value="Отсевоблок">
+                                        <label for="material-3">Отсевоблок</label>
+                                    </div>
+                                    <div>
+                                        <input class="custom-radio" name="material" type="radio" id="material-4" value="Газобетон">
+                                        <label for="material-4">Газобетон</label>
+                                    </div>
+                                    <div>
+                                        <input class="custom-radio" name="material" type="radio" id="material-5" value="Туфоблок">
+                                        <label for="material-5">Туфоблок</label>
+                                    </div> 
+                                    
+                                    <!--выбор кровли (для мобильных)-->
+                                    <div class="type-roof">
+                                        <div>
+                                            <input class="custom-radio" name="roof" type="radio" id="roof-1" value="1">
+                                            <label for="roof-1">Холодная кровля</label>
+                                        </div>
+                                        <div>
+                                            <input class="custom-radio" name="roof" type="radio" id="roof-2" value="2">
+                                            <label for="roof-2">Теплая кровля</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="sp-slide last">
+                                <div class="order-call">
+                                    <div class="form">
+                                        <div class="form__content">
+                                            <div class="form__fields">
+                                                <input type="text" placeholder="Ваше имя">
+                                                <input type="tel" placeholder="Ваш номер телефона +7 -"> 
                                             </div>
-                                            <div class="form__bottom">
-                                                <a href="" class="btn">
-                                                    <span>Отправить</span>
-                                                    <img src="images/arrow-right.svg" alt="Отправить">
-                                                </a>
-                                                <p>Заполняя форму на сайте, вы соглашаетесь с нашей 
-                                                    <a href="">Политикой конфиденциальности</a>
-                                                </p>
+                                            <div class="form__fields">
+                                                <input type="text" placeholder="Комментарий" class="full">
                                             </div>
                                         </div>
-                                    </div>                                
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="form__links">
-                            <div class="form__link form__link--back"><img src="images/arrow-back.svg" alt=""><span>Предыдущий шаг</span></div>
-                            <div class="form__link form__link--forward"><span>Следующий шаг</span><img src="images/arrow-right-black.svg" alt=""></div>
-                        </div>
-                        
-                    </form>
-                </div>
+                                        <div class="form__bottom">
+                                            <a href="" class="btn">
+                                                <span>Отправить</span>
+                                                <img src="images/arrow-right.svg" alt="Отправить">
+                                            </a>
+                                            <p>Заполняя форму на сайте, вы соглашаетесь с нашей 
+                                                <a href="">Политикой конфиденциальности</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>                                
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form__links">
+                        <div class="form__link form__link--back"><img src="images/arrow-back.svg" alt=""><span>Предыдущий шаг</span></div>
+                        <div class="form__link form__link--forward"><span>Следующий шаг</span><img src="images/arrow-right-black.svg" alt=""></div>
+                    </div>
+                    
+                </form>
+                <img src="images/img-calc.png" alt="Pic" class="calculator-img">
+            </div>
 
         
         </div>

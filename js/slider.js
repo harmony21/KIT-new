@@ -135,6 +135,43 @@ $(document).ready(function() {
 
 
 
+    //Слайдер в мобильной версии "Услуги подробно"
+    var variationSlider = $("#variationSlider");
+    variationSlider.lightSlider({
+      item: 1,
+      speed: 800,
+      pause: 6000,
+      controls: false,
+      pager: false,
+      enableDrag: false,
+      adaptiveHeight: true,
+    }); 
+    $('.variation__change--left').click(function(){
+      variationSlider.goToNextSlide(); 
+    });
+    $('.variation__change--right').click(function(){
+      variationSlider.goToPrevSlide(); 
+    });
+
+    //галерея в моб.версии "Услуги подробно"
+    $('#imageGallery').sliderPro({
+      buttons: false,
+      autoplay: false,
+  });  
+
+
+
+
+  var imageGallery = $('#imageGallery').data('sliderPro');
+
+  $('.arrow-right-gallery-more-mobile').click(function(){
+    imageGallery.nextSlide(); 
+  });
+  $('.arrow-left-gallery-more-mobile').click(function(){
+    imageGallery.previousSlide(); 
+  });
+
+
     //Слайдер "почему к нам стоит обратиться"
     var reasonsSlider = $("#reasonsSlider");
     if ($(window).width() <= 1024) {
@@ -154,29 +191,14 @@ $(document).ready(function() {
           {
             breakpoint:480,
             settings: {
-                item:1.2,
+                slideMargin:20,
+                item:1.3,
               }
           }
         ]
       }); 
     }
 
-    //Слайдер в мобильной версии "Услуги подробно"
-    var variationSlider = $("#variationSlider");
-    variationSlider.lightSlider({
-      item: 1,
-      speed: 800,
-      pause: 6000,
-      controls: false,
-      pager: false,
-      enableDrag: false,
-    }); 
-    $('.variation__change--left').click(function(){
-      variationSlider.goToNextSlide(); 
-    });
-    $('.variation__change--right').click(function(){
-      variationSlider.goToPrevSlide(); 
-    });
     
 })
 

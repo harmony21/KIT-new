@@ -4,8 +4,14 @@ body {
     body {
       font-size: 13px; } }
 
+p {
+  font-size: 16px; }
+
 .header {
   background-color: rgba(0, 0, 0, 0.5); }
+  @media screen and (max-width: 480px) {
+    .header--changable {
+      background-color: rgba(0, 0, 0, 0.5) !important; } }
   .header--inside {
     background-color: transparent; }
     @media screen and (max-width: 768px) {
@@ -216,12 +222,6 @@ body {
   color: #888;
   border-color: #888; }
 
-.section .desc-wrap {
-  font-size: 14px; }
-  @media screen and (max-width: 480px) {
-    .section .desc-wrap {
-      font-size: 15px; } }
-
 @media screen and (max-width: 480px) {
   .btn-more span {
     color: rgba(0, 0, 0, 0.5);
@@ -234,7 +234,7 @@ body {
       font-size: 28px; } }
   @media screen and (max-width: 480px) {
     .section-title {
-      font-size: 22px; } }
+      font-size: 20px; } }
   .section-title ~ p {
     font-size: 14px; }
     .section-title ~ p a {
@@ -397,6 +397,9 @@ body {
   .footer__bottom a {
     color: rgba(255, 255, 255, 0.5); }
 
+.mobile-menu li a {
+  font-size: 18px; }
+
 .mobile-menu a {
   color: #fff; }
 
@@ -404,6 +407,9 @@ body {
   .mobile-menu .address p {
     color: rgba(255, 255, 255, 0.6);
     font-size: 14px; } }
+
+.mobile-menu .mail {
+  font-size: 16px; }
 
 .order-call .form__bottom p {
   text-align: center;
@@ -439,17 +445,23 @@ body {
 
 .reviews__desc div:last-child p:first-child {
   font-size: 14px; }
+  @media screen and (max-width: 480px) {
+    .reviews__desc div:last-child p:first-child {
+      font-size: 18px; } }
 
 .reviews__desc div:last-child p:last-child {
   font-size: 12px;
   color: rgba(0, 0, 0, 0.5); }
+  @media screen and (max-width: 480px) {
+    .reviews__desc div:last-child p:last-child {
+      font-size: 15px; } }
 
 @media screen and (max-width: 768px) {
   .links a span {
     font-size: 11px; } }
   @media screen and (max-width: 768px) and (max-width: 480px) {
     .links a span {
-      font-size: 12px; } }
+      font-size: 10px; } }
 
 @media screen and (max-width: 768px) {
   .links a:first-child {
@@ -457,6 +469,11 @@ body {
     background: #E7EFFC; }
   .links a:last-child {
     background: #1253C0;
+    color: #fff; } }
+
+@media screen and (max-width: 768px) and (max-width: 480px) {
+  .links a.links__item-changable {
+    background: rgba(231, 239, 252, 0.5);
     color: #fff; } }
 
 .prices th {
@@ -551,7 +568,7 @@ body {
       font-size: 18px; } }
   @media screen and (max-width: 480px) {
     .news__item h3 {
-      font-size: 16px; } }
+      font-size: 18px; } }
 
 .news__desc div span {
   font-size: 14px;
@@ -586,9 +603,6 @@ body {
       text-transform: uppercase;
       font-size: 26px; } }
 
-.news-more__desc p {
-  font-size: 14px; }
-
 .gallery-more__right {
   background: rgba(231, 239, 252, 0.5); }
   .gallery-more__right h4 {
@@ -601,6 +615,16 @@ body {
 @media screen and (max-width: 480px) {
   .news-more__intro--services .news-more__title h2, .news-more__intro--services .news-more__title span {
     color: #fff; } }
+
+@media screen and (max-width: 480px) {
+  .news-more__intro--services .news-more__title h2 {
+    text-transform: none;
+    font-size: 36px; } }
+
+@media screen and (max-width: 480px) {
+  .variation__title p {
+    font-size: 20px;
+    font-weight: bold; } }
 
 .variation__center table td {
   background: rgba(231, 239, 252, 0.9);
@@ -625,14 +649,17 @@ body {
   .factos p {
     font-size: 18px; }
   .factos__item {
-    font-size: 12px; }
+    font-size: 16px; }
+  @media screen and (max-width: 480px) {
+    .factos .section-title {
+      font-size: 22px; } }
 
 .types__title h3 {
   color: #1253C0;
   font-size: 30px; }
   @media screen and (max-width: 480px) {
     .types__title h3 {
-      font-size: 18px; } }
+      font-size: 20px; } }
 
 .types__title div:last-child {
   color: #E73A3E; }

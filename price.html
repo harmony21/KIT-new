@@ -80,7 +80,7 @@
                                 <li class="menu__item"><a href="index.html">Главная</a></li>
                                 <li class="menu__item menu-show-elements"><a href="">Наши услуги</a></li>
                                 <li class="menu__item"><a href="price.html">Наши цены</a></li>
-                                <li class="menu__item"><a href="">Калькулятор</a></li>
+                                <li class="menu__item"><a href="" data-fancybox data-src="#calculator" class="menu__link calculator">Калькулятор</a></li>
                                 <li class="menu__item"><a href="news.html">Новости</a></li>
                                 <li class="menu__item"><a href="gallery.html">Галерея</a></li>
                                 <li class="menu__item"><a href="reviews.html">Отзывы</a></li>
@@ -701,7 +701,7 @@
                         <p>г. Хабаровск, ул. Металлистов 1а, офис № 207</p>
                         <p>Режим работы: Пн.-Вс. 9.00-21.00</p>
                     </div>
-                    <a href="" class="btn">
+                    <a href="" data-fancybox data-src="#order-call" class="btn footer-order-call">
                         <span>Заказать звонок</span>
                         <img src="images/arrow-right.svg" alt="Написать в WhatsApp">
                     </a>
@@ -712,7 +712,7 @@
                         <a href="index.html">Главная</a>
                         <a href="services.html">Наши услуги</a>
                         <a href="price.html">Наши цены</a>
-                        <a href="">Калькулятор</a>
+                        <a href="" data-fancybox data-src="#calculator" class="menu__link calculator">Калькулятор</a>
                         <a href="news.html">Новости</a>
                         <a href="gallery.html">Галерея</a>
                         <a href="reviews.html">Отзывы</a>
@@ -741,7 +741,8 @@
             <!--Мобильное меню-->
             <div class="modal-window mobile-menu" id="mobile-menu">
                 <a href="index.html" class="logo">
-                    <img src="images/logo.svg" alt="Строительная компания 'КИТ'">
+                    <img src="images/logo-footer.svg" alt="Строительная компания 'КИТ'"><br>
+                    <span>Проектирование и строительство домов под ключ</span>
                 </a>
                 <a href="" class="btn btn--green">
                     <span>Написать в WhatsApp</span>
@@ -797,8 +798,8 @@
                 </form>
             </div>
 
-            <!--Рассчитать стоимость-->
-            <div class="modal-window form-calculator" id="calculator">
+             <!--Рассчитать стоимость-->
+             <div class="modal-window form-calculator" id="calculator">
                 <img src="images/form-background.png" alt="Фон" class="form__background">
                 <form action="" class="form-calc">
                     <div class="form__title">
@@ -806,7 +807,7 @@
                     </div> 
                     <div class="slider-pro form__slider" id="calculateSlider">
                         <ul class="sp-slides">
-                            <li class="sp-slide">
+                            <li class="sp-slide first">
                                 <p>Полезная площадь (площадь всех внутренних помещений)</p>
                                 <h4>Шаг 1</h4>
                                 <div class="form__wrap">
@@ -855,7 +856,7 @@
                                     </div>                           
                                 </div>
                             </li>
-                            <li class="sp-slide">
+                            <li class="sp-slide middle">
                                 <p>Материал стен</p>
                                 <h4>Шаг 3</h4>
                                 <div class="form__wrap mobile-straight">
@@ -878,10 +879,22 @@
                                     <div>
                                         <input class="custom-radio" name="material" type="radio" id="material-5" value="Туфоблок">
                                         <label for="material-5">Туфоблок</label>
-                                    </div>                              
+                                    </div> 
+                                    
+                                    <!--выбор кровли (для мобильных)-->
+                                    <div class="type-roof">
+                                        <div>
+                                            <input class="custom-radio" name="roof" type="radio" id="roof-1" value="1">
+                                            <label for="roof-1">Холодная кровля</label>
+                                        </div>
+                                        <div>
+                                            <input class="custom-radio" name="roof" type="radio" id="roof-2" value="2">
+                                            <label for="roof-2">Теплая кровля</label>
+                                        </div>
+                                    </div>
                                 </div>
                             </li>
-                            <li class="sp-slide">
+                            <li class="sp-slide last">
                                 <div class="order-call">
                                     <div class="form">
                                         <div class="form__content">
@@ -913,6 +926,7 @@
                     </div>
                     
                 </form>
+                <img src="images/img-calc.png" alt="Pic" class="calculator-img">
             </div>
 
         

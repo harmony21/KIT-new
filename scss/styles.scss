@@ -36,9 +36,17 @@ body {
         font-size: 13px;
     }
 }
+p {
+    font-size: 16px;
+}
 
 .header {
     background-color: rgba(0, 0, 0, 0.5);
+    &--changable {
+        @include phones {
+            background-color: rgba(0, 0, 0, 0.5) !important;
+        }
+    }
     &--inside {
         background-color: transparent;
         @include min-tablets {
@@ -323,14 +331,6 @@ body {
         border-color:#888;
     }
 }
-.section {
-    .desc-wrap {
-        font-size: 14px;
-        @include phones {
-            font-size: 15px;
-        }
-    }
-}
 .btn-more {
     @include phones {
         span {
@@ -345,7 +345,7 @@ body {
         font-size: 28px;
     }
     @include phones {
-        font-size: 22px;
+        font-size: 20px;
     }
     ~p {
         font-size: 14px;
@@ -570,6 +570,11 @@ body {
     }
 }
 .mobile-menu {
+    li {
+        a {
+            font-size: 18px;
+        }
+    }
     a {
         color: #fff;
     }
@@ -581,6 +586,9 @@ body {
             }
             
         }
+    }
+    .mail {
+        font-size: 16px;
     }
 }
 .order-call {
@@ -643,10 +651,16 @@ body {
                 p {
                     &:first-child {
                         font-size: 14px;
+                        @include phones {
+                            font-size: 18px;
+                        }
                     }
                     &:last-child {
                         font-size: 12px;
                         color: rgba(0, 0, 0, 0.5);
+                        @include phones {
+                            font-size: 15px;
+                        }
                     }
                 }
             }
@@ -659,7 +673,7 @@ body {
             span {
                 font-size: 11px;
                 @include phones {
-                    font-size: 12px;
+                    font-size: 10px;
                 }
             }
             &:first-child {
@@ -669,6 +683,12 @@ body {
             &:last-child {
                 background: #1253C0;
                 color: #fff;
+            }
+            &.links__item-changable {
+                @include phones {
+                    background: rgba(231, 239, 252, 0.5);
+                    color: #fff;
+                }
             }
         }
     }
@@ -813,7 +833,7 @@ body {
                 font-size: 18px;
             }
             @include phones {
-                font-size: 16px;
+                font-size: 18px;
             }
         }
     }
@@ -865,11 +885,6 @@ body {
             }
         }
     }
-    &__desc {
-        p {
-            font-size: 14px;
-        }
-    }
 }
 //Галерея подробно
 .gallery-more {
@@ -898,11 +913,25 @@ body {
                         color: #fff;
                     }
                 }
+                h2 {
+                    @include phones {
+                        text-transform: none;
+                        font-size: 36px;
+                    }
+                }
             }
         }
     }
 }
 .variation {
+    &__title {
+        p {
+            @include phones {
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+    }
     &__center {
         table {
             td {
@@ -939,7 +968,12 @@ body {
         font-size: 18px;
     }
     &__item {
-        font-size: 12px;
+        font-size: 16px;
+    }
+    .section-title {
+        @include phones {
+            font-size: 22px;
+        }
     }
 }
 //Проектирование
@@ -949,7 +983,7 @@ body {
             color: #1253C0;
             font-size: 30px;
             @include phones {
-                font-size: 18px;
+                font-size: 20px;
             }
         }
         div {

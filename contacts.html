@@ -79,7 +79,7 @@
                                 <li class="menu__item"><a href="index.html">Главная</a></li>
                                 <li class="menu__item menu-show-elements"><a href="">Наши услуги</a></li>
                                 <li class="menu__item"><a href="price.html">Наши цены</a></li>
-                                <li class="menu__item"><a href="">Калькулятор</a></li>
+                                <li class="menu__item"><a href="" data-fancybox data-src="#calculator" class="menu__link calculator">Калькулятор</a></li>
                                 <li class="menu__item"><a href="news.html">Новости</a></li>
                                 <li class="menu__item"><a href="gallery.html">Галерея</a></li>
                                 <li class="menu__item"><a href="reviews.html">Отзывы</a></li>
@@ -154,7 +154,7 @@
 
 
             <!--Instagram-->
-            <section class="section section--instagram section--instagram-inside">
+            <section class="section section--instagram section--instagram-inside section--instagram-inside-contact">
                 <div>
                     <h2 class="section-title">Строительная компания "КИТ"</h2>
                     <p>Подпишитесь на наш профиль в Instagram, и Вы сможете следить 
@@ -174,7 +174,7 @@
 
             
             <!--Описание-->
-            <section class="section">
+            <section class="section section--mobile-hidden">
                 <h2 class="section-title">О компании</h2>
                 <div class="desc-wrap">
                     <div class="desc">
@@ -183,11 +183,13 @@
                         <p>Сотрудники строительной компании "КИТ" - это высококвалифицированные профессионалы с многолетним опытом работы в области малоэтажного строительства. Все исполняемые нами работы строго соответствуют Российскому строительному законодательству и ГОСТам. Имеется свой парк спецтехники. Гарантия на все виды работ. Поэтапная оплата.</p>
                     </div>
                 </div>
-                
-                <a href="javascript:void(0);" class="btn-more">
-                    <img src="images/arrow-right-black.svg" alt="">
-                    <span>Развернуть текст</span>
-                </a>
+            </section>
+
+            <section class="section contacts-desc"> 
+                <h2 class="section-title">Строительство малоэтажного дома в Хабаровске</h2>
+                    <p>За годы работы на строительном рынке компания "Кит" зарекомендовала себя как надежный застройщик и является одной из лидеров строительных компаний в Хабаровске и Хабаровском крае по объёмом малоэтажного строительства.</p>
+                    <p>Основная миссия компании – разрушить стереотип в голове клиента о том, что строительство дома – это головная боль и потраченные нервы.</p>
+                    <p>При сотрудничестве с нами Вы получаете выполнение услуг качественно и в установленный срок. Обращаясь в компанию "Кит", Вы получаете надежный дом, построенный в соответствии со всеми строительными нормами и правилами.</p>
             </section>
 
 
@@ -203,7 +205,7 @@
                         <p>г. Хабаровск, ул. Металлистов 1а, офис № 207</p>
                         <p>Режим работы: Пн.-Вс. 9.00-21.00</p>
                     </div>
-                    <a href="" class="btn">
+                    <a href="" data-fancybox data-src="#order-call" class="btn footer-order-call">
                         <span>Заказать звонок</span>
                         <img src="images/arrow-right.svg" alt="Написать в WhatsApp">
                     </a>
@@ -214,14 +216,14 @@
                         <a href="index.html">Главная</a>
                         <a href="services.html">Наши услуги</a>
                         <a href="price.html">Наши цены</a>
-                        <a href="">Калькулятор</a>
+                        <a href="" data-fancybox data-src="#calculator" class="menu__link calculator">Калькулятор</a>
                         <a href="news.html">Новости</a>
                         <a href="gallery.html">Галерея</a>
                         <a href="reviews.html">Отзывы</a>
                         <a href="contacts.html">Контакты</a>
                     </nav>
                     <a class="mail" href="mailto:sk-kit-khv@mail.ru">sk-kit.khv@mail.ru</a>
-                    <a class="phone" href="tel:+74212777565">+7 (4212) 777-565</a>
+                    <a class="phone" href="tel:+74212777565">8 929 573 33 80</a>
                     <div class="socials">
                         <ul>
                             <li><a href="http://instagram.ru"><img src="images/inst-icon.svg" alt="Instagram"></a></li>
@@ -243,7 +245,8 @@
             <!--Мобильное меню-->
             <div class="modal-window mobile-menu" id="mobile-menu">
                 <a href="index.html" class="logo">
-                    <img src="images/logo.svg" alt="Строительная компания 'КИТ'">
+                    <img src="images/logo-footer.svg" alt="Строительная компания 'КИТ'"><br>
+                    <span>Проектирование и строительство домов под ключ</span>
                 </a>
                 <a href="" class="btn btn--green">
                     <span>Написать в WhatsApp</span>
@@ -299,8 +302,8 @@
                 </form>
             </div>
 
-            <!--Рассчитать стоимость-->
-            <div class="modal-window form-calculator" id="calculator">
+             <!--Рассчитать стоимость-->
+             <div class="modal-window form-calculator" id="calculator">
                 <img src="images/form-background.png" alt="Фон" class="form__background">
                 <form action="" class="form-calc">
                     <div class="form__title">
@@ -308,7 +311,7 @@
                     </div> 
                     <div class="slider-pro form__slider" id="calculateSlider">
                         <ul class="sp-slides">
-                            <li class="sp-slide">
+                            <li class="sp-slide first">
                                 <p>Полезная площадь (площадь всех внутренних помещений)</p>
                                 <h4>Шаг 1</h4>
                                 <div class="form__wrap">
@@ -357,7 +360,7 @@
                                     </div>                           
                                 </div>
                             </li>
-                            <li class="sp-slide">
+                            <li class="sp-slide middle">
                                 <p>Материал стен</p>
                                 <h4>Шаг 3</h4>
                                 <div class="form__wrap mobile-straight">
@@ -380,10 +383,22 @@
                                     <div>
                                         <input class="custom-radio" name="material" type="radio" id="material-5" value="Туфоблок">
                                         <label for="material-5">Туфоблок</label>
-                                    </div>                              
+                                    </div> 
+                                    
+                                    <!--выбор кровли (для мобильных)-->
+                                    <div class="type-roof">
+                                        <div>
+                                            <input class="custom-radio" name="roof" type="radio" id="roof-1" value="1">
+                                            <label for="roof-1">Холодная кровля</label>
+                                        </div>
+                                        <div>
+                                            <input class="custom-radio" name="roof" type="radio" id="roof-2" value="2">
+                                            <label for="roof-2">Теплая кровля</label>
+                                        </div>
+                                    </div>
                                 </div>
                             </li>
-                            <li class="sp-slide">
+                            <li class="sp-slide last">
                                 <div class="order-call">
                                     <div class="form">
                                         <div class="form__content">
@@ -415,6 +430,7 @@
                     </div>
                     
                 </form>
+                <img src="images/img-calc.png" alt="Pic" class="calculator-img">
             </div>
 
         

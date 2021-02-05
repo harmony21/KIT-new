@@ -80,7 +80,7 @@
                                 <li class="menu__item"><a href="index.html">Главная</a></li>
                                 <li class="menu__item menu-show-elements"><a href="">Наши услуги</a></li>
                                 <li class="menu__item"><a href="price.html">Наши цены</a></li>
-                                <li class="menu__item"><a href="">Калькулятор</a></li>
+                                <li class="menu__item"><a href="" data-fancybox data-src="#calculator" class="menu__link calculator">Калькулятор</a></li>
                                 <li class="menu__item"><a href="news.html">Новости</a></li>
                                 <li class="menu__item"><a href="gallery.html">Галерея</a></li>
                                 <li class="menu__item"><a href="reviews.html">Отзывы</a></li>
@@ -271,7 +271,7 @@
             </section>
 
             <!--Уже сделали расчет?-->
-            <section class="section section--made-calculate" style="background:url('temp/calculate-background.jpg');background-position:center center;background-size:cover;background-repeat:no-repeat;">
+            <section class="section section--made-calculate section--mobile-hidden" style="background:url('temp/calculate-background.jpg');background-position:center center;background-size:cover;background-repeat:no-repeat;">
                 <div class="calculate-condition">
                     <div class="calculate-condition__left">
                         <h2>Уже сделали расчет в другой компании?</h2>
@@ -685,7 +685,7 @@
             <!--Описание-->
             <section class="section">
                 <h2 class="section-title">Строительная компания "КИТ"</h2>
-                <div class="desc-wrap">
+                <div class="desc-wrap main">
                     <div class="desc">
                         <p>Есть идея строительства собственного дома, но не знаете кому доверить ее реализацию? Доверьте это дело специалистам строительной компании "КИТ". Своим клиентам мы оказываем полный спектр услуг по проектированию, строительству, благоустройству и отделке домов на территории г. Хабаровска и Хабаровского края.</p>
                         <p>Наша компания является одной из ведущих и стабильно развивающихся строительных компаний в сфере малоэтажного строительства в Хабаровском крае с опытом работы более 10 лет. За это время специалистами нашей компании было реализовано огромное количество проектов по строительству домов, коттеджей, коммерческих и промышленных зданий. Строительная компания "КИТ" работает только с лучшими, проверенными временем, поставщиками строительных материвло и использует современные технологии в строительстве. Все используемые нами материалы высокого качества, потдвержденные сертификатами и лабораторными испытаниями.</p>
@@ -693,7 +693,7 @@
                     </div>
                 </div>
                 
-                <a href="javascript:void(0);" class="btn-more">
+                <a href="javascript:void(0);" class="btn-more btn-more-main">
                     <img src="images/arrow-right-black.svg" alt="">
                     <span>Развернуть текст</span>
                 </a>
@@ -754,7 +754,7 @@
                         <p>г. Хабаровск, ул. Металлистов 1а, офис № 207</p>
                         <p>Режим работы: Пн.-Вс. 9.00-21.00</p>
                     </div>
-                    <a href="" class="btn">
+                    <a href="" data-fancybox data-src="#order-call" class="btn footer-order-call">
                         <span>Заказать звонок</span>
                         <img src="images/arrow-right.svg" alt="Написать в WhatsApp">
                     </a>
@@ -765,7 +765,7 @@
                         <a href="index.html">Главная</a>
                         <a href="services.html">Наши услуги</a>
                         <a href="price.html">Наши цены</a>
-                        <a href="">Калькулятор</a>
+                        <a href="" data-fancybox data-src="#calculator" class="menu__link calculator">Калькулятор</a>
                         <a href="news.html">Новости</a>
                         <a href="gallery.html">Галерея</a>
                         <a href="reviews.html">Отзывы</a>
@@ -794,7 +794,8 @@
             <!--Мобильное меню-->
             <div class="modal-window mobile-menu" id="mobile-menu">
                 <a href="index.html" class="logo">
-                    <img src="images/logo.svg" alt="Строительная компания 'КИТ'">
+                    <img src="images/logo-footer.svg" alt="Строительная компания 'КИТ'"><br>
+                    <span>Проектирование и строительство домов под ключ</span>
                 </a>
                 <a href="" class="btn btn--green">
                     <span>Написать в WhatsApp</span>
@@ -859,7 +860,7 @@
                         </div> 
                         <div class="slider-pro form__slider" id="calculateSlider">
                             <ul class="sp-slides">
-                                <li class="sp-slide">
+                                <li class="sp-slide first">
                                     <p>Полезная площадь (площадь всех внутренних помещений)</p>
                                     <h4>Шаг 1</h4>
                                     <div class="form__wrap">
@@ -908,7 +909,7 @@
                                         </div>                           
                                     </div>
                                 </li>
-                                <li class="sp-slide">
+                                <li class="sp-slide middle">
                                     <p>Материал стен</p>
                                     <h4>Шаг 3</h4>
                                     <div class="form__wrap mobile-straight">
@@ -931,10 +932,22 @@
                                         <div>
                                             <input class="custom-radio" name="material" type="radio" id="material-5" value="Туфоблок">
                                             <label for="material-5">Туфоблок</label>
-                                        </div>                              
+                                        </div> 
+                                        
+                                        <!--выбор кровли (для мобильных)-->
+                                        <div class="type-roof">
+                                            <div>
+                                                <input class="custom-radio" name="roof" type="radio" id="roof-1" value="1">
+                                                <label for="roof-1">Холодная кровля</label>
+                                            </div>
+                                            <div>
+                                                <input class="custom-radio" name="roof" type="radio" id="roof-2" value="2">
+                                                <label for="roof-2">Теплая кровля</label>
+                                            </div>
+                                        </div>
                                     </div>
                                 </li>
-                                <li class="sp-slide">
+                                <li class="sp-slide last">
                                     <div class="order-call">
                                         <div class="form">
                                             <div class="form__content">
@@ -966,6 +979,7 @@
                         </div>
                         
                     </form>
+                    <img src="images/img-calc.png" alt="Pic" class="calculator-img">
                 </div>
 
         

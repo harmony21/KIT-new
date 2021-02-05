@@ -43,6 +43,7 @@ $phones: 480px;
 }
 html {
     height: 100%;
+    overflow-x: hidden;
 }
 body {
     font-family: Circe-Regular;
@@ -68,6 +69,11 @@ img {
 }
 table {
     border-color: #fff;
+}
+p {
+    @include phones {
+        line-height: 1.4;
+    }
 }
 .wrapper {
     width: 100%;
@@ -483,13 +489,10 @@ table {
     }
     @include phones {
         display: block;
-        bottom: 322px;
+        bottom: 315px;
     }
-    @media screen and (max-width:442px) {
+    @media screen and (max-width:425px) {
         bottom: 340px;
-    }
-    @media screen and (max-width:430px) {
-        bottom: 355px;
     }
     ul {
         display: flex;
@@ -549,7 +552,7 @@ table {
     width: 708px;
     padding: 16px 16px 50px 16px;
     background: rgba(231, 239, 252, 0.3);
-    z-index: 10;
+    z-index: 30;
     @include laptop {
         padding: 16px 16px 10px 16px;  
         width: 95%;
@@ -575,7 +578,7 @@ table {
             background-color: transparent;
         }
         @include phones {
-            bottom: -100px;
+            bottom: -130px;
         }
         .form__content {
             @include min-tablets {
@@ -706,6 +709,13 @@ table {
         cursor:pointer;
     }
 }
+.calculator-img {
+    width: 100%;
+    display: none;
+    @include phones {
+        display: block;
+    }
+}
 .range-slider {
     position: relative;
     margin-top: 20px;
@@ -740,6 +750,9 @@ table {
             color: #fff !important;
             left: 20px;
         }
+        @include phones {
+            left: 90px;
+        }
     }
     #result-max {
         top: -25px;
@@ -747,6 +760,9 @@ table {
         @include min-tablets {
             color: #fff !important;
             left: 100px;
+        }
+        @include phones {
+            left: 190px;
         }
     }
     .ui-slider-horizontal {
@@ -795,7 +811,7 @@ table {
         }
         @include phones {
             background: transparent;
-            padding: 20px 20px 50px 20px;
+            padding: 20px 0 50px 0;
             margin-top: 0;
             margin-bottom: 20px;
         }
@@ -839,6 +855,54 @@ table {
                 left: 30px;
             }
         }
+        &-inside-contact {
+            @include phones {
+                padding: 10px 0 50px 0;
+                &:before {
+                    display: none;
+                } 
+                &:after {
+                    content: "";
+                    width: calc(100% - 60px);
+                    display: block;
+                    margin: auto;
+                    height: 1px;
+                    background-color: #1253C0;
+                    position: absolute;
+                    bottom: 0;
+                    left: 30px;
+                }
+            }  
+        }
+        &-inside-hidden {
+            @include phones {
+                padding: 0 0 35px 0;
+                &:before {
+                    display: none;
+                } 
+                &:after {
+                    display: none;
+                }
+            }
+        }
+        &-inside--services {
+            @include phones {
+                background: rgba(231, 239, 252, 0.3);
+                &:before {
+                    display: none;
+                }&:after {
+                    content: "";
+                    width: calc(100% - 60px);
+                    display: block;
+                    margin: auto;
+                    height: 1px;
+                    background-color: #1253C0;
+                    position: absolute;
+                    bottom: 0;
+                    left: 30px;
+                }
+            }
+        }
     }
     &--map {
         position: relative;
@@ -870,27 +934,169 @@ table {
         @include tablets {
             display: none;
         }
+        @include phones {
+            display: flex;
+            .calculate-condition {
+                flex-direction: column;
+                width: 100%;
+                box-sizing: border-box;
+                position: relative;
+                height: 670px;
+                &__left, &__right {
+                    width: 100%;
+                }
+                &__left {
+                    margin: 20px 0;
+                    h2 {
+                        font-size: 35px;
+                    }
+                    p {
+                        width: 100%;
+                        box-sizing: border-box;
+                        margin: 20px 0;
+                        font-size: 16px;
+                        
+                    }
+                }
+                &__right {
+                    .form {
+                        width: calc(100% + 40px);
+                        box-sizing: border-box;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        background: #1253C0;
+                        padding-bottom: 40px;
+                        margin-left: -20px;
+                        &__content {
+                            background: #1253C0;
+                            padding: 0;
+                        }
+                        &__title {
+                            margin-left: 20px;
+                            img {
+                                width: 50px;
+                            }
+                            h3 {
+                                color: #fff;
+                                font-size: 20px;
+                                width: 70%;
+                                margin-left: 15px;
+                            }
+                        }
+                        &__bottom {
+                            margin-top: 0;
+                            flex-direction: column;
+                            p {
+                                width: auto;
+                                text-align: center;
+                                margin: 0;
+                            }
+                            .btn {
+                                margin-top: 15px;
+                                color: #1253C0;
+                                background-color: #fff;
+                            }
+                        }
+                        &__fields {
+                            flex-direction: column;
+                            margin-top: 0px;
+                            input {
+                                width: 96%;
+                                color: #fff;
+                                border-bottom: 1px solid #fff;
+                                padding: 13px 15px;
+                                margin: 10px;
+                                &.full {
+                                    display: none;
+                                }
+                            }
+                            :-moz-placeholder {
+                                color: #fff;
+                            }
+                            :-ms-input-placeholder {
+                                color: #fff;
+                            }
+                            ::-moz-placeholder {
+                                color: #fff;
+                            }
+                            ::-webkit-input-placeholder {
+                                color: #fff;
+                            }
+                            .form-group {
+                                margin: 30px 0;
+                                label {
+                                    span {
+                                        color: #fff;
+                                        margin-right: 15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     &--mobile-hidden {
         @include phones {
             display: none;
         }
     }
+    &--services-more--objects {
+        .gallery-wrap {
+            @include phones {
+                display: none;
+            }
+        }
+        .gallery-wrap--mobile {
+            display: none;
+            @include phones {
+                display: block;
+                .gallery__item {
+                    &:nth-child(2) {
+                        display: flex;
+                    }
+                    &.all-objects {
+                        height: 100px;
+                    }
+                }
+            }
+        }
+    }
 
     .desc-wrap {
-        padding: 10px 180px 0 230px;
+        padding: 10px 200px 40px 200px;
         margin: 0;
         p {
             padding: 5px;
             margin: 0;
         }
         @include laptop {
-            padding: 10px 20px 0 80px;
+            padding: 10px 100px 30px 100px;
+        }
+        @include tablets {
+            padding: 10px 10px 30px 10px;
         }
         @include phones {
             padding: 0 20px 0 20px;
-            height: 120px;
+            height: 117px;
             overflow: hidden;
+        }
+        &.main {
+            @include phones {
+                height: 212px;
+            }
+        }
+    }
+    .desc-wrap-reason {
+        @include phones {
+            padding: 0;
+            height: 117px;
+            overflow: hidden;
+            p {
+                margin: 0;
+            }
         }
     }
 }
@@ -899,10 +1105,26 @@ table {
     @include phones {
         display: flex;
         margin-left: 20px;
-        margin-top: 10px;
+        margin-top: 25px;
         span {
             text-transform: uppercase;
             margin-left: 5px;
+        }
+    }
+    &-projection {
+        @include phones {
+            margin-bottom: 30px;
+        }
+    }
+    &-desc {
+        @include phones {
+            margin-bottom: 30px;
+        }
+    }
+    &-reason {
+        @include phones {
+            margin-bottom: 30px;
+            margin-left: 0;
         }
     }
 }
@@ -918,7 +1140,7 @@ table {
         padding: 60px 20px 0 50px;
     }
     @include phones { 
-        padding: 20px 20px 10px 20px;
+        padding: 30px 20px 25px 20px;
     }
     ~p {
         padding: 10px 180px 0 230px;
@@ -940,12 +1162,27 @@ table {
             }
         }
     }
+    &.three-d {
+        @include phones {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            &:after {
+                content: "Наши проекты";
+                font-weight: normal;
+                margin-top: 15px;
+                font-size: 14px;
+            }
+        }
+    }
 }
 .activities {
     margin: 40px 60px 0 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    z-index: 10;
     @include laptop {
         margin: 40px 20px 0 20px;
     }
@@ -1143,7 +1380,7 @@ hr {
     margin: 0 auto;
     margin-top: 40px;
     @include phones {
-        margin-top: 20px;
+        margin-top: 30px;
     }
 }
 .calculate-condition {
@@ -1387,6 +1624,20 @@ hr {
                     display: flex;
                 }
             }
+        }
+    }
+}
+#imageGallery {
+    @include phones {
+        &:before {
+            content: "";
+            width: calc(100% - 40px);
+            height: 1px;
+            background-color: #1253C0;
+            display: block;
+            position: absolute;
+            top: -30px;
+            margin-left: 20px;
         }
     }
 }
@@ -1685,15 +1936,27 @@ hr {
     display: none;
 }
 .mobile-menu {
-    width: 90%;
-    margin-left: -10%;
+    width: 80%;
+    margin-left: -20%;
     height: 100%;
     &.fancybox-content {
         vertical-align: top;
+        padding: 10px;
     }
     .fancybox-button {
+        top: 25px !important;
         svg {
             color: #fff;
+        }
+    }
+    .logo {
+        img {
+            width: 70%;
+        }
+        span {
+            font-size: 12.5px;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: none;
         }
     }
     .btn {
@@ -1701,7 +1964,13 @@ hr {
             @include phones {
                 display: flex;
                 margin: 20px 0;
+                width: 240px;
             }
+        }
+    }
+    li {
+        a {
+            margin-bottom: 20px;
         }
     }
     a {
@@ -1730,11 +1999,11 @@ hr {
         justify-content: flex-start;
         a {
             img {
-                width: 25px;
+                width: 40px;
+                margin-right: 20px;
             }
             &:last-child {
-                font-size: 18px;
-                margin-left: 20px;
+                font-size: 25px;
             }
         }
     }
@@ -1795,7 +2064,7 @@ hr {
 .order-call {
     background-color: #fff;
     vertical-align: middle;
-    width: 60%;
+    width: 730px;
     .fancybox-slide--html .fancybox-close-small {
         color: #fff;
     }
@@ -1891,6 +2160,9 @@ hr {
 }
 .reviews-links {
     margin: 40px 0;
+    @include phones {
+        margin: 0 0 40px 0;
+    }
     ul {
         display: flex;
         align-items: center;
@@ -1948,7 +2220,11 @@ hr {
         display: flex;
         justify-content: center;
         @include phones {
-           width: 70%;
+           width: 100%;
+           height: 335px;
+            & > img {
+               width: 100%;
+           }
         }
     }
     &__link {
@@ -1967,6 +2243,10 @@ hr {
         margin-top: 20px;
         display: flex;
         align-items: flex-start;
+        @include phones {
+            width: 100%;
+            align-items: center;
+        }
         p {
            margin: 0;
         }
@@ -1974,12 +2254,20 @@ hr {
             &:first-child {
                 padding-right: 15px;
                 border-right: 1px solid #000;
+                img {
+                    @include phones {
+                        width: 30px;
+                    }
+                }
             }
             &:last-child {
                 padding-left: 15px;
                 p {
                     &:first-child {
                         width: 60%;
+                        @include phones {
+                            width: 100%;
+                        }
                         span {
                             font-weight: bold;
                         }
@@ -1998,14 +2286,22 @@ hr {
         display: flex;
         width: 100%;
         justify-content: space-between;
+        @include phones {
+            position: relative;
+            z-index: 10;
+        }
         a {
             display: flex;
             align-items: center;
             width: 50%;
             box-sizing: border-box;
             padding: 15px;
+            @include phones {
+                padding: 10px 5px;
+                justify-content: center;
+            }
             span {
-                margin-left: 15px;
+                margin-left: 10px;
                 text-transform: uppercase;
             }
         }
@@ -2085,10 +2381,42 @@ hr {
 .gallery-wrap {
     margin: 0 180px;
     position: relative;
+    z-index: 10;
+    .gallery {
+        margin-left: 0;
+        &__item {
+            &.all-objects {
+                justify-content: center;
+                @include phones {
+                    height: 200px;
+                    display: flex;
+                }
+            }
+        }
+    }
     &--inside {
         margin: 0;
         @include laptop {
             margin-bottom: 20px !important;
+        }
+        @include phones {
+            display: none;
+        }
+        &--mobile {
+            display: none;
+            @include phones {
+                display: block;
+                .sp-slide {
+                    img {
+                        width: 100%;
+                    }
+                }
+                .sp-thumbnail {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
     &--desktop {
@@ -2111,18 +2439,7 @@ hr {
     @include phones {
         margin: 0
     }
-    .gallery {
-        margin-left: 0;
-        &__item {
-            &.all-objects {
-                justify-content: center;
-                @include phones {
-                    height: 200px;
-                    display: flex;
-                }
-            }
-        }
-    }
+
 }
 .arrow {
     width: 60px;
@@ -2247,6 +2564,15 @@ hr {
         margin: 0;
     }
 }
+.contacts-desc {
+    display: none;
+    @include phones {
+        display: block;
+        .section-title ~ p {
+            margin: 5px 0 !important; 
+        }
+    }
+}
 
 //Наши услуги
 .section-title {
@@ -2309,10 +2635,10 @@ hr {
         background: #E7EFFC;
         padding: 15px;
         box-sizing: border-box;
-        // width: 110%;
-        // // position: absolute;
-        // margin-left: -15px;
-        // position: absolute;
+        p {
+            padding-left: 0 !important;
+            font-size: 16px;
+        }
 
     }
 }
@@ -2337,8 +2663,6 @@ hr {
             @include phones {
                 width: 100%;
                 height: auto;
-                // box-sizing: border-box;
-                // padding: 0 15px;
             }
             &:nth-child(3), &:nth-child(4) {
                 @include phones {
@@ -2360,6 +2684,11 @@ hr {
         .activities__wrap {
             display: none;
             padding-bottom: 20px;
+            .btn {
+                @include phones {
+                    margin: 0 auto;
+                }
+            }
             p {
                 @include phones {
                     padding: 0 15px;
@@ -2368,6 +2697,17 @@ hr {
         }
         .activities__link {
             margin: 15px 0;
+            display: block;
+            &.hide {
+                @include phones {
+                    img {
+                        transform: rotate(180deg); 
+                    }
+                    span {
+                        color: #1253C0;
+                    }
+                } 
+            }
             @include phones {
                 padding: 0 15px;
             }
@@ -2403,7 +2743,13 @@ hr {
                 .activities__desc {
                     display: none;
                 }
+                @include phones {
+                    .activities__wrap {
+                        display: block;
+                    }
+                }
             }
+
         }
         .activities__icon {
             &.tech {
@@ -2451,6 +2797,7 @@ hr {
         }
         @include phones {
             width: 100%;
+            padding: 40px 0 20px 20px;
         }
         &:hover {
             h3 {
@@ -2460,6 +2807,10 @@ hr {
         h3 {
             text-transform: uppercase;
             transition: 0.4s ease-in-out;
+            @include phones {
+                font-weight: normal;
+                padding-right: 10px;
+            }
         }
     }
     &__desc {
@@ -2588,20 +2939,29 @@ hr {
         position: absolute;
         bottom: 35px;
         left: 180px;
-        @include tablets {
+        @media screen and (max-width: 1600px) {
+            left: 100px;
+            width: 40%;
+        }
+        @include laptop {
             left: 20px;
         }
         @include phones {
             position: relative;
             bottom: -20px;
             left: 10px;
+            width: 100%;
         }
         h2 {
             margin: 10px 0;
         }
         span {
-            font-size: 14px;
+            font-size: 24px;
             color: #fff;
+            text-transform: uppercase;
+            @include tablets {
+                font-size: 14px;
+            }
             @include phones {
                 color: #000;
             }
@@ -2614,28 +2974,73 @@ hr {
         @include phones {
             padding-top: 80px;
         }
+        &--project {
+            margin-top: -165px;
+        }
+
         .news-more__block {
+            &.special {
+                background: rgba(231, 239, 252, 0.5);
+                width:calc(100% + 360px);
+                margin-left: -180px;
+                position: relative;
+                @include laptop {
+                    width: 100%;
+                    margin-left: 0;
+                }
+                @include phones {
+                    background: transparent;
+                    margin-top: 0;
+                }
+                &.services-more {
+                    @include phones {
+                        margin-top: 220px;
+                    }
+                    .desc-wrap {
+                        @include phones {
+                            padding: 0;
+                        }
+                    }
+                }
+                .news-more__design-block {
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 48px;
+                        position: absolute;
+                        top: -48px;
+                        left: -0;
+                        z-index: 12;
+                        background: rgba(231, 239, 252, 0.5);
+                        @include laptop {
+                            left: 0;
+                            top: -45px;
+                            height: 45px;
+                        }
+                        @include phones {
+                            display: none;
+                        }
+                }
+           
+            }
             @include phones {
-                margin-top: 380px;
+                margin-top: 250px;
             }
             &:before {
                 content: "";
                 display: block;
-                width: 100%;
+                width: calc(100% - 360px);
                 height: 1px;
                 background-color: #1253C0;
                 margin-bottom: 25px;
+                margin-left: 180px;
+                @include laptop {
+                    width: 100%;
+                    margin-left: 0;
+                }
                 @include phones {
                     display: none;
                 }
-            }
-            &:after {
-                content: "";
-                display: block;
-                width: 100%;
-                height: 1px;
-                background-color: #1253C0;
-                margin-top: 20px;
             }
         }
         .btn {
@@ -2664,6 +3069,9 @@ hr {
         @include min-tablets {
             width: 100%;
             margin-top: 10px;
+        }
+        @include phones {
+            padding-left: 12px;
         }
         span {
             margin-left: 20px;
@@ -2697,18 +3105,37 @@ hr {
         @include laptop {
             width: 100%;
         }
+        @include phones {
+            height: auto;
+            margin-left: -10px;
+            width: calc(100% + 20px);
+            img {
+                width: 100%;
+            }
+        }
     }
     &__right {
         padding: 30px 40px;
         margin-left: 15px;
         @include min-tablets {
             width: 100%;
-            margin-left: 0;
+            margin-left: 0px;
             margin-top: 20px;
             box-sizing: border-box;
+            @include phones {
+                width: calc(100% + 20px);
+                margin-left: -10px;
+            }
+        }
+        @include phones {
+            padding: 0;
         }
         h4 {
             margin: 0;
+            @include phones {
+                background-color: #fff;
+                margin-left: 20px;
+            }
         }
         div {
             margin: 15px 0;
@@ -2717,15 +3144,28 @@ hr {
             span {
                 margin: 0 15px;
             }
+            @include phones {
+                background-color: #fff;
+                margin: 0;
+                padding: 15px 0 15px 20px;
+            }
         }
         ul {
+            padding: 0 10px 10px 20px;
             li {
-                border-bottom: 1px solid rgba(18, 83, 192, 0.5);
-                padding: 8px 0;
+                border-top: 1.5px solid rgba(18, 83, 192, 0.5);
+                padding: 12px 0;
+                @include phones {
+                    display: flex;
+                    flex-direction: column;
+                }
             }
         }
         .btn {
             margin-top: 10px;
+            @include phones {
+                margin: 10px auto;
+            }
         }
     }
 }
@@ -2734,15 +3174,70 @@ hr {
     &__intro {
         &--services {
             @include phones {
-                height: 160px;
+                height: 440px;
+                top: -188px;
+            }
+            &~.news-more__desc {
+                @include phones {
+                    overflow: hidden;
+                }
+            }
+            .news-more__pic {
+                @include phones {
+                    height: 100%;
+                    img {
+                        height: 100%;
+                        width: auto;
+                        margin-left: -180px;
+                    }
+                }
+            }
+            .news-more__category {
+                display: none;
+                @include phones {
+                    display: flex;
+                    align-items: center;
+                    position: absolute;
+                    top: 200px;
+                    a {
+                        color: #fff;
+                        font-size: 18px;
+                        margin-left: 15px;
+                    }
+                    img {
+                        width: 40px;
+                    }
+                }
             }
             .news-more__title {
-                bottom: 110px;
+                bottom: 150px;
             }
             .form.calculator {
                 bottom: 15px;
                 @include phones {
-                    bottom: 85px;
+                    bottom: 110px;
+                    padding: 5px;
+                }
+            }
+            .form__fields {
+                input {
+                    @include phones {
+                        padding: 10px 15px !important;
+                    }
+                }
+            }
+            .range-slider {
+                span {
+                    &:last-child {
+                        @include phones {
+                            right: 10px;
+                        }
+                    }
+                    &:first-child {
+                        @include phones {
+                            left: 10px;
+                        }
+                    }
                 }
             }
         }
@@ -2760,15 +3255,27 @@ hr {
     li {
         width: calc(95%/5);
         border: 2px solid #1253C0;
-        height: 195px;
+        height: 95px;
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
+        @include phones {
+            opacity: 0.5;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 0 5px;
+            &.active {
+                opacity: 1;
+            }
+        }
     }
 }
 .variation {
     margin: 80px 0;
+    @include phones {
+        margin: 40px 0 0 0;
+    }
     &--desktop {
         @include phones {
             display: none;
@@ -2787,6 +3294,9 @@ hr {
         height: 1px;
         background: #1253C0;
         margin-bottom: 50px;
+        @include phones {
+            display: none;
+        }
     }
     &:after {
         content: "";
@@ -2910,6 +3420,13 @@ hr {
                     text-align: center;
                     margin: 0 10px;
                     text-transform: uppercase;
+                    @include phones {
+                        height: 46px;
+                        padding: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
                 }
             }
         }
@@ -2927,6 +3444,19 @@ hr {
         align-items: flex-start;
         padding: 20px !important;
         margin-top: 0;
+    }
+    .section-title {
+        @include phones {
+            padding-left: 0;
+            padding-right: 0;
+            img {
+                width: 50px;
+            }
+            span {
+                width: 80%;
+                margin-left: 10px;
+            }
+        }
     }
     &--desktop {
         @include phones {
@@ -2946,24 +3476,51 @@ hr {
         text-transform: uppercase;
     }
     ul {
+        @include phones {
+            margin-top: 20px;
+        }
         li {
             font-weight: bold;
             text-decoration: underline;
             margin: 5px 0;
+            @include phones {
+                margin: 10px 0;
+            }
         }
     }
     &__wrap {
         display: none;
+        ul {
+            li {
+                @include phones {
+                    display: flex;
+                    align-items: center;
+                    &:before {
+                        content: "";
+                        display: block;
+                        width: 34px;
+                        height: 1px;
+                        background: #1253C0;
+                        margin-right: 10px;
+                        
+                    }
+                }
+            }
+        }
     }
     &__item {
         margin-top: 15px !important;
+        @include phones {
+            margin-bottom: 20px !important;
+            margin-top: 0 !important;
+        }
         img {
+            margin-right: 10px;
             &.active {
                 transform: rotate(180deg);
             }
         }
         span {
-            margin-left: 10px;
             text-transform: uppercase;
             &.active {
                 color: #1253C0;
@@ -3007,6 +3564,9 @@ hr {
 }
 //Проектирование
 .types {
+    @include phones {
+        margin-bottom: 15px;
+    }
     &__item {
         display: flex;
         margin-top: 20px;
@@ -3024,6 +3584,7 @@ hr {
     &__title {
         display: flex;
         align-items: center;
+        position: relative;
         @include phones {
             align-items: flex-start;
         }
@@ -3033,6 +3594,9 @@ hr {
         div {
             &:first-child {
                 width: 60%;
+                @include phones {
+                    width: 100%;
+                }
                 p {
                     margin: 8px 0;
                 }
@@ -3045,6 +3609,11 @@ hr {
                 align-items: flex-end;
                 p {
                     margin: 0;
+                }
+                @include phones {
+                    position: absolute;
+                    right: 10px;
+                    top: -10px;
                 }
             }
         }
@@ -3070,10 +3639,15 @@ hr {
             li {
                 display: flex;
                 align-items: center;
+                span {
+                    display: block;
+                    width: 90%;
+                    font-weight:bold;
+                }
                 &:before {
                     content: "";
                     display: block;
-                    width: 34px;
+                    width: 16px;
                     height: 1px;
                     background: #1253C0;
                     margin-right: 10px;
@@ -3150,6 +3724,18 @@ hr {
             display: none;
         }
     }
+    h4 {
+        margin-top: 50px;
+        @include phones {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    }
+    &.special {
+        @include phones {
+            margin-bottom: 65px;
+        }
+    }
 }
 
 //Форма "Получить расчет от специалистов"
@@ -3164,7 +3750,7 @@ hr {
         width: 100%;
     }
     @include phones {
-        padding: 40px 20px;
+        padding: 40px 10px 0 10px;
     }
     .fancybox-slide--html .fancybox-close-small {
         color: #000 !important;
@@ -3201,15 +3787,21 @@ hr {
         display: flex;
         align-items: center;
         justify-content: center;
+        @include phones {
+            width: 100%;
+        }
         .form__link {
             width: 200px;
             display: flex;
             align-items: center;
             background: #E7EFFC;
+            border: 3px solid #E7EFFC;
             padding: 10px;
             margin: 0 30px;
             @include phones {
-                width: 48%;
+                width: 50%;
+                margin: 0;
+                justify-content: center;
             }
             &:hover {
                 cursor: pointer;
@@ -3222,15 +3814,21 @@ hr {
                     font-size: 10px;
                 }
             }
+            &.form__link--back {
+                background: #fff;
+                border: 2px solid #E7EFFC;
+            }
         }
     }
     .form__wrap {
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
         flex-wrap: wrap;
         position: relative;
         margin-bottom: 30px;
+        width: 80%;
+        margin-left: 65px;
         div {
             width: 255px;
             background: #E7EFFC;
@@ -3254,6 +3852,26 @@ hr {
                 width: 52%;
                 @include phones {
                     width: 65%;
+                    background: #fff;
+                    .custom-radio+label::before {
+                        width: 43px !important;
+                        height: 43px !important;
+                        border: 4px solid #E7EFFC;
+                        margin-right: 0.5em;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        margin-right: 50px;
+                        @include phones {
+                            margin-right: 10px;
+                        }
+                    }
+                    .custom-radio:checked+label::before {
+                        background-image: url("images/checked-grey.png") !important;
+                    }
+                    &.active {
+                        background-color: #fff;
+                        color: #000;
+                    }
                 }
             }
             img {
@@ -3269,7 +3887,23 @@ hr {
             div {
                 @include phones {
                     width: 100%;
+                    box-sizing: border-box;
                     margin-top: 0;
+                }
+            }
+            .type-roof {
+                display: none;
+                @include phones {
+                    display: flex;
+                    width: 100%;
+                    margin: 10px 0;
+                    background: #fff !important;
+                    div {
+                        margin: 0 2px;
+                        label {
+                            font-size: 10px;
+                        }
+                    }
                 }
             }
         }
@@ -3280,6 +3914,9 @@ hr {
             font-size: 14px;
             margin-top: 25px;
             text-align: center;
+            @include phones {
+                text-align: left;
+            }
         }
         li {
             .order-call {
@@ -3291,6 +3928,7 @@ hr {
                 font-size: 22px;
                 @include phones {
                     margin: 10px 0;
+                    text-align: left;
                 }
             }
             .custom-radio {
@@ -3341,6 +3979,33 @@ hr {
             .custom-radio:checked+label::before {
                 background-image: url("images/checked.png");
             }
+        }
+    }
+    .form {
+        @include phones {
+            margin-top: 20px;
+            input {
+                margin: 20px 0 10px 0;
+            }
+        }
+        &__bottom {
+            @include phones {
+                flex-direction: column-reverse;
+                margin-top: 10px;
+                p {
+                    color: #000;
+                    text-align: center;
+                    a {
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+    .fancybox-button {
+        top: 30px;
+        svg {
+            color: #1253C0;
         }
     }
 }
