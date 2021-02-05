@@ -159,9 +159,6 @@ $(document).ready(function() {
       autoplay: false,
   });  
 
-
-
-
   var imageGallery = $('#imageGallery').data('sliderPro');
 
   $('.arrow-right-gallery-more-mobile').click(function(){
@@ -170,6 +167,23 @@ $(document).ready(function() {
   $('.arrow-left-gallery-more-mobile').click(function(){
     imageGallery.previousSlide(); 
   });
+
+
+   //галерея в моб.версии "Услуги подробно"
+   $('#imageGallery1').sliderPro({
+    buttons: false,
+    autoplay: false,
+});  
+
+var imageGallery1 = $('#imageGallery1').data('sliderPro');
+
+$('.arrow-right-gallery-more-mobile').click(function(){
+  imageGallery1.nextSlide(); 
+});
+$('.arrow-left-gallery-more-mobile').click(function(){
+  imageGallery1.previousSlide(); 
+});
+
 
 
     //Слайдер "почему к нам стоит обратиться"
